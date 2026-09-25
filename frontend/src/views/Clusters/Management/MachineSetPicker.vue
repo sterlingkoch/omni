@@ -124,7 +124,7 @@ function toggleOption(option: PickerOption, index: number, checked: boolean) {
       <PopoverTrigger class="group flex h-6 items-center gap-1 px-1">
         <TIcon
           icon="chevron-left"
-          class="mx-1 h-3 w-3 text-naturals-n7 transition-all group-hover:scale-125 group-hover:text-naturals-n14"
+          class="mx-1 h-3 w-3 text-content-muted transition-all group-hover:scale-125 group-hover:text-naturals-n14"
         />
         <template v-if="pickedOption">
           <span class="resource-label" :class="pickedOption.labelClass">

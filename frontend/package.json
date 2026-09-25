@@ -22,7 +22,8 @@
     "test": "vitest",
     "test:e2e": "playwright test",
     "lint": "eslint . && prettier -c .",
-    "lint:fix": "eslint . --fix --prune-suppressions && prettier -wl ."
+    "lint:fix": "eslint . --fix --prune-suppressions && prettier -wl .",
+    "sync:design-system": "node scripts/sync-design-system.mjs"
   },
   "dependencies": {
     "@auth0/auth0-vue": "^2.9.0",

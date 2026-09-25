@@ -419,7 +419,7 @@ useTitle('Overview')
 }
 
 .overview-data-heading {
-  @apply w-full border-b border-naturals-n4 px-4 py-3 text-xs text-naturals-n13;
+  @apply w-full border-b border-border-default px-4 py-3 text-xs text-naturals-n13;
   font-size: 13px;
 }
 .overview-data-row {

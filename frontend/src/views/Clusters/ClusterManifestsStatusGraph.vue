@@ -99,9 +99,9 @@ const manifestYAML = computed(() => {
           </div>
         </div>
 
-        <div class="text-xs text-naturals-n10/55">Drag to pan · scroll to zoom</div>
+        <div class="text-xs text-content-muted">Drag to pan · scroll to zoom</div>
 
-        <div class="flex overflow-hidden rounded border border-naturals-n4 bg-naturals-n1">
+        <div class="flex overflow-hidden rounded border border-border-default bg-naturals-n1">
           <IconButton
             icon="plus"
             aria-label="zoom in"
@@ -132,9 +132,11 @@ const manifestYAML = computed(() => {
 
     <div
       v-if="selectedManifest"
-      class="flex w-full shrink-0 flex-col overflow-hidden rounded-lg border border-naturals-n4 @3xl:w-md"
+      class="flex w-full shrink-0 flex-col overflow-hidden rounded-lg border border-border-default @3xl:w-md"
     >
-      <div class="flex justify-between gap-2 border-b border-naturals-n4 bg-naturals-n1 px-4 py-2">
+      <div
+        class="flex justify-between gap-2 border-b border-border-default bg-naturals-n1 px-4 py-2"
+      >
         <div class="flex flex-col gap-1 leading-tight">
           <div class="flex items-center gap-4">
             <h3 class="text-sm font-medium text-naturals-n14">

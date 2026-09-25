@@ -314,7 +314,7 @@ useTitle('Scale')
     </div>
 
     <div
-      class="flex h-16 shrink-0 items-center border-t border-naturals-n4 bg-naturals-n1 px-5 py-3"
+      class="flex h-16 shrink-0 items-center border-t border-border-default bg-naturals-n1 px-5 py-3"
     >
       <ClusterMenu
         class="w-full"

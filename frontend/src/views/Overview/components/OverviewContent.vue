@@ -335,7 +335,7 @@ const machineLockedForSecretRotation = computed(() => {
             </span>
           </template>
         </div>
-        <div class="flex min-h-20 items-center gap-2 border-t-8 border-naturals-n4 p-4 text-xs">
+        <div class="flex min-h-20 items-center gap-2 border-t-8 border-border-default p-4 text-xs">
           <TIcon
             v-if="clusterLocked || machineLockedForKubernetesUpgrade"
             icon="pause-circle"
@@ -395,7 +395,7 @@ const machineLockedForSecretRotation = computed(() => {
             <span class="text-sm text-naturals-n13">Updating Machine Schematics</span>
           </template>
         </div>
-        <div class="flex min-h-20 items-center gap-2 border-t-8 border-naturals-n4 p-4 text-xs">
+        <div class="flex min-h-20 items-center gap-2 border-t-8 border-border-default p-4 text-xs">
           <TIcon
             v-if="clusterLocked || machineLockedForTalosUpgrade"
             icon="pause-circle"
@@ -433,7 +433,7 @@ const machineLockedForSecretRotation = computed(() => {
           <span class="flex-1 text-sm text-naturals-n13">Secret Rotation</span>
           <span class="text-sm text-naturals-n13">{{ getComponentInRotation }}</span>
         </div>
-        <div class="flex min-h-20 items-center gap-2 border-t-8 border-naturals-n4 p-4 text-xs">
+        <div class="flex min-h-20 items-center gap-2 border-t-8 border-border-default p-4 text-xs">
           <TIcon
             v-if="clusterLocked || machineLockedForSecretRotation"
             icon="pause-circle"

@@ -9,6 +9,8 @@ import { computed } from 'vue'
 
 import type { IconType } from '@/components/Icon/TIcon.vue'
 import TIcon from '@/components/Icon/TIcon.vue'
+import StatusPill from '@/components/Status/StatusPill.vue'
+import { toneFromTextClass } from '@/components/Status/statusTone'
 import { NodesViewFilterOptions, TCommonStatuses, TPodsViewFilterOptions } from '@/constants'
 
 type Props = {
@@ -198,14 +200,13 @@ const iconData = computed((): { iconClass?: string; iconTypeValue?: IconType } =
 </script>
 
 <template>
-  <div class="flex items-center gap-1">
-    <TIcon
-      class="size-4"
-      :class="iconData.iconClass"
-      :icon="iconData.iconTypeValue ?? 'action-horizontal'"
-    />
-    <span v-if="title" class="text-xs" :class="iconData.iconClass">
-      {{ title }}
-    </span>
-  </div>
+  <StatusPill v-if="title" :tone="toneFromTextClass(iconData.iconClass)">
+    {{ title }}
+  </StatusPill>
+  <TIcon
+    v-else
+    class="size-4"
+    :class="iconData.iconClass"
+    :icon="iconData.iconTypeValue ?? 'action-horizontal'"
+  />
 </template>

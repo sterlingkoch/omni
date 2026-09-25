@@ -110,7 +110,7 @@ watch(filterValue, () => {
 
     <div
       v-if="completions.length > 0 && showCompletions"
-      class="absolute top-full left-0 z-10 mt-1 flex min-w-full flex-col divide-y divide-naturals-n6 rounded border border-naturals-n4 bg-naturals-n2"
+      class="absolute top-full left-0 z-10 mt-1 flex min-w-full flex-col divide-y divide-border-strong rounded border border-border-default bg-naturals-n2"
     >
       <div
         v-for="(suggestion, index) in completions"

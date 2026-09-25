@@ -45,7 +45,7 @@ defineProps<{
     <div
       v-for="item in machines.slice(0, 5)"
       :key="item.metadata.id"
-      class="grid grid-cols-3 items-center gap-2 border-t border-naturals-n4 px-4 py-3 max-sm:grid-cols-[1fr_1fr_auto]"
+      class="grid grid-cols-3 items-center gap-2 border-t border-border-default px-4 py-3 max-sm:grid-cols-[1fr_1fr_auto]"
     >
       <div class="flex min-w-0 items-center gap-2">
         <RouterLink

@@ -65,7 +65,7 @@ const clusterDestroyDialogOpen = ref(false)
   <CollapsibleRoot
     v-model:open="expanded"
     as="li"
-    class="col-span-full grid grid-cols-subgrid overflow-hidden rounded border border-naturals-n5 text-xs"
+    class="col-span-full grid grid-cols-subgrid overflow-hidden rounded border border-border-strong text-xs"
     :aria-labelledby="labelId"
   >
     <CollapsibleTrigger
@@ -104,14 +104,14 @@ const clusterDestroyDialogOpen = ref(false)
 
       <div class="flex items-center gap-2 text-naturals-n10">
         <Tooltip :description="`Talos version v${item.spec.talos_version}`">
-          <span class="resource-label label-red flex items-center gap-1">
+          <span class="flex items-center gap-1 text-content-default">
             <TIcon class="size-3.5 shrink-0" icon="talos" />
             {{ item.spec.talos_version }}
           </span>
         </Tooltip>
 
         <Tooltip :description="`Kubernetes version v${item.spec.kubernetes_version}`">
-          <span class="resource-label label-blue flex items-center gap-1">
+          <span class="flex items-center gap-1 text-content-default">
             <TIcon class="size-3.5 shrink-0" icon="kubernetes" />
             {{ item.spec.kubernetes_version }}
           </span>
@@ -189,7 +189,7 @@ const clusterDestroyDialogOpen = ref(false)
       :aria-labelledby="labelId"
       class="collapsible-content col-span-full grid grid-cols-subgrid"
     >
-      <div class="col-span-full border-t border-naturals-n6 bg-naturals-n1 px-4 py-2">
+      <div class="col-span-full border-t border-border-strong bg-naturals-n1 px-4 py-2">
         <ItemLabels
           :resource="item"
           :add-label-func="addClusterLabels"

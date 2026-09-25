@@ -94,7 +94,7 @@ const labelId = useId()
 
 <template>
   <li
-    class="my-1 flex items-center gap-2 rounded border border-naturals-n5 bg-naturals-n3 px-2 py-2 pr-3 text-xs text-naturals-n13"
+    class="my-1 flex items-center gap-2 rounded border border-border-strong bg-naturals-n3 px-2 py-2 pr-3 text-xs text-naturals-n13"
     :aria-labelledby="labelId"
   >
     <div class="w-10">

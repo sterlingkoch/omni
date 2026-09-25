@@ -10,8 +10,9 @@ import pluralize from 'pluralize'
 import type { Resource } from '@/api/grpc'
 import type { MachineSetStatusSpec } from '@/api/omni/specs/omni.pb'
 import { MachineSetPhase } from '@/api/omni/specs/omni.pb'
-import type { IconType } from '@/components/Icon/TIcon.vue'
 import TIcon from '@/components/Icon/TIcon.vue'
+import StatusPill from '@/components/Status/StatusPill.vue'
+import { toneFromTextClass } from '@/components/Status/statusTone'
 
 const phaseName = (machineset: Resource<MachineSetStatusSpec>): string => {
   switch (machineset?.spec.phase) {
@@ -35,28 +36,6 @@ const phaseName = (machineset: Resource<MachineSetStatusSpec>): string => {
       return 'Upgrading'
     default:
       return 'Unknown'
-  }
-}
-
-const phaseIcon = (machineset: Resource<MachineSetStatusSpec>): IconType => {
-  switch (machineset?.spec.phase) {
-    case MachineSetPhase.Upgrading:
-    case MachineSetPhase.ScalingUp:
-    case MachineSetPhase.ScalingDown:
-    case MachineSetPhase.Reconfiguring:
-      return 'loading'
-    case MachineSetPhase.Running:
-      if (machineset?.spec.ready) {
-        return 'check-in-circle'
-      } else {
-        return 'error'
-      }
-    case MachineSetPhase.Destroying:
-      return 'delete'
-    case MachineSetPhase.Failed:
-      return 'error'
-    default:
-      return 'unknown'
   }
 }
 
@@ -90,10 +69,9 @@ defineProps<Props>()
 
 <template>
   <div class="flex gap-2">
-    <div :class="phaseClass(item)" class="flex items-center gap-1">
-      <TIcon :icon="phaseIcon(item)" class="h-4" />
-      <div data-testid="machine-set-phase-name">{{ phaseName(item) || '' }}</div>
-    </div>
+    <StatusPill :tone="toneFromTextClass(phaseClass(item))" data-testid="machine-set-phase-name">
+      {{ phaseName(item) || '' }}
+    </StatusPill>
     <div v-if="item.spec.locked_updates" class="flex items-center gap-1 text-sky-400">
       <TIcon icon="time" class="h-4" />
       {{ pluralize('Pending Config Update', item.spec.locked_updates, true) }}

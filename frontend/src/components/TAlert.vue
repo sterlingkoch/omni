@@ -32,7 +32,7 @@ const icons: Record<AlertType, IconType> = {
 
 <template>
   <div
-    class="rounded-md border border-l-4 border-naturals-n6 bg-naturals-n0 p-4"
+    class="rounded-md border border-l-4 border-border-strong bg-naturals-n0 p-4"
     :class="{
       'border-l-red-r2': type === 'error',
       'border-l-blue-400': type === 'info',

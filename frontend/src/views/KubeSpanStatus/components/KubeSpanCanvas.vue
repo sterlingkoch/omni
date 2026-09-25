@@ -152,7 +152,7 @@ onNodeClick(({ node }) => {
     :nodes-draggable="false"
     :min-zoom="0.2"
     :max-zoom="3"
-    class="min-h-80 overflow-hidden rounded-sm border border-naturals-n4 bg-naturals-n0"
+    class="min-h-80 overflow-hidden rounded-sm border border-border-default bg-naturals-n0"
   >
     <Background variant="dots" :gap="22" :size="2" pattern-color="var(--color-naturals-n4)" />
 

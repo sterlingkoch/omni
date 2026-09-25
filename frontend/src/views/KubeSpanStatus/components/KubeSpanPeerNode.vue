@@ -24,7 +24,7 @@ const { data } = defineProps<NodeProps<KubeSpanPeerNodeData>>()
 
 <template>
   <div
-    class="flex size-full items-center gap-2 rounded-md border border-naturals-n6 bg-naturals-n2 px-2.5 shadow-lg/40 transition-opacity"
+    class="flex size-full items-center gap-2 rounded-md border border-border-strong bg-naturals-n2 px-2.5 shadow-lg/40 transition-opacity"
     :class="data.dimmed ? 'opacity-30' : 'opacity-100'"
   >
     <Handle id="left" type="target" :position="Position.Left" class="min-h-0! min-w-0!" />

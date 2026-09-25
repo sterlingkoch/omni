@@ -28,6 +28,7 @@ import IconButton from '@/components/Button/IconButton.vue'
 import TIcon from '@/components/Icon/TIcon.vue'
 import PageContainer from '@/components/PageContainer/PageContainer.vue'
 import StatsItem from '@/components/Stats/StatsItem.vue'
+import StatusPill from '@/components/Status/StatusPill.vue'
 import TInput from '@/components/TInput/TInput.vue'
 import { useResourceWatch } from '@/methods/useResourceWatch'
 import KubeSpanCanvas from '@/views/KubeSpanStatus/components/KubeSpanCanvas.vue'
@@ -149,9 +150,9 @@ function onPeerClick(peer: Resource<PeerStatusSpec>) {
             </div>
           </div>
 
-          <div class="text-xs text-naturals-n10/55">Drag to pan · scroll to zoom</div>
+          <div class="text-xs text-content-muted">Drag to pan · scroll to zoom</div>
 
-          <div class="flex overflow-hidden rounded border border-naturals-n4 bg-naturals-n1">
+          <div class="flex overflow-hidden rounded border border-border-default bg-naturals-n1">
             <IconButton
               icon="plus"
               aria-label="zoom in"
@@ -200,18 +201,15 @@ function onPeerClick(peer: Resource<PeerStatusSpec>) {
           <div
             v-for="peer in peers"
             :key="peer.metadata.id"
-            class="flex cursor-pointer flex-col gap-1 border-naturals-n6 px-2 py-3 transition-opacity not-last-of-type:border-b hover:bg-naturals-n3"
+            class="flex cursor-pointer flex-col gap-1 border-border-strong px-2 py-3 transition-opacity not-last-of-type:border-b hover:bg-naturals-n3"
             :class="!peerMatches.has(peer.metadata.id!) && 'opacity-30'"
             @click="onPeerClick(peer)"
           >
             <div class="flex items-center justify-between gap-1">
               <span class="truncate text-sm text-naturals-n13">{{ peer.spec.label }}</span>
-              <span
-                class="rounded bg-current/20 px-1.5 py-0.5 text-xs uppercase"
-                :class="isOnline(peer) ? 'text-green-g1' : 'text-red-r1'"
-              >
+              <StatusPill :tone="isOnline(peer) ? 'success' : 'danger'">
                 {{ isOnline(peer) ? 'Online' : 'Offline' }}
-              </span>
+              </StatusPill>
             </div>
 
             <div class="flex justify-between gap-3 text-[0.625rem] text-naturals-n11">

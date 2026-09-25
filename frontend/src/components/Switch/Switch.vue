@@ -30,7 +30,7 @@ const checked = defineModel<boolean>({ default: false })
     <SwitchRoot
       v-model="checked"
       :disabled
-      class="inline-flex h-5 w-8 rounded-full border border-naturals-n7 bg-naturals-n4 transition-[background] disabled:cursor-not-allowed disabled:brightness-50 data-[state=checked]:border-primary-p3 data-[state=checked]:bg-primary-p3"
+      class="inline-flex h-5 w-8 rounded-full border border-border-strong bg-naturals-n4 transition-[background] disabled:cursor-not-allowed disabled:brightness-50 data-[state=checked]:border-primary-p3 data-[state=checked]:bg-primary-p3"
     >
       <SwitchThumb
         class="my-auto size-3.5 translate-x-0.5 rounded-full bg-naturals-n13 text-xs transition-transform data-[state=checked]:translate-x-full"

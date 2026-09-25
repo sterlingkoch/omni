@@ -17,7 +17,7 @@ defineProps<{
     <div class="flex cursor-pointer items-center gap-2.5 rounded-md">
       <div
         class="size-3.5 shrink-0 rounded-full border bg-clip-content p-0.5 transition-colors duration-250"
-        :class="checked ? 'border-primary-p4 bg-primary-p4' : 'border-naturals-n5 bg-transparent'"
+        :class="checked ? 'border-primary-p4 bg-primary-p4' : 'border-border-strong bg-transparent'"
       ></div>
 
       <div class="text-xs">

@@ -18,6 +18,8 @@ import {
   KubernetesManifestGroupSpecMode,
 } from '@/api/omni/specs/omni.pb'
 import TListItem from '@/components/List/TListItem.vue'
+import StatusPill from '@/components/Status/StatusPill.vue'
+import { toneFromTextClass } from '@/components/Status/statusTone'
 
 const { manifestsStatus } = defineProps<{
   manifestsStatus: Resource<ClusterKubernetesManifestsStatusSpec>
@@ -123,9 +125,9 @@ const groupInSyncCount = (group: ClusterKubernetesManifestsStatusSpecGroupStatus
   >
     <div class="flex flex-1 items-center gap-4">
       <span class="font-bold">{{ group.id }}</span>
-      <span class="resource-label label-green" :class="groupPhaseClass(group.phase)">
+      <StatusPill :tone="toneFromTextClass(groupPhaseClass(group.phase))">
         {{ groupPhaseName(group.phase) }}
-      </span>
+      </StatusPill>
       <span class="text-xs text-naturals-n9">
         Mode:
         <span class="text-naturals-n13">{{ modeName(group.mode) }}</span>

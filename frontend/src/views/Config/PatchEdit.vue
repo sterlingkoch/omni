@@ -444,7 +444,7 @@ watch(
       </div>
     </PageContainer>
     <div
-      class="flex h-16 shrink-0 items-center gap-4 border-t border-naturals-n4 bg-naturals-n1 px-5 py-3"
+      class="flex h-16 shrink-0 items-center gap-4 border-t border-border-default bg-naturals-n1 px-5 py-3"
     >
       <TButton class="secondary" @click="() => $router.push(back)">Back</TButton>
       <div class="flex-1" />

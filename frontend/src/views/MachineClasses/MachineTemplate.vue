@@ -71,7 +71,9 @@ const updateGRPCTunnelMode = (value: GRPCTunnelMode) => {
   <div class="text-naturals-n13">Machine Template</div>
   <div class="rounded bg-naturals-n2">
     <div class="px-4 pt-4 pb-2 text-sm text-naturals-n13">Talos Config</div>
-    <div class="flex flex-col divide-y divide-naturals-n4 border-t-8 border-naturals-n4 text-xs">
+    <div
+      class="flex flex-col divide-y divide-border-default border-t-8 border-border-default text-xs"
+    >
       <div class="flex items-center justify-between gap-2 px-4 py-2">
         <span class="whitespace-nowrap">Kernel Arguments</span>
         <TInput v-model="kernelArguments" class="h-7 w-56" />
@@ -95,7 +97,9 @@ const updateGRPCTunnelMode = (value: GRPCTunnelMode) => {
     <div class="px-4 pt-4 pb-2 text-sm text-naturals-n13">
       {{ infraProviderStatus.spec.name }} Provider Config
     </div>
-    <div class="flex flex-col divide-y divide-naturals-n4 border-t-8 border-naturals-n4 text-xs">
+    <div
+      class="flex flex-col divide-y divide-border-default border-t-8 border-border-default text-xs"
+    >
       <JsonForm v-model="providerConfig" :json-schema="infraProviderStatus.spec.schema" />
     </div>
   </div>

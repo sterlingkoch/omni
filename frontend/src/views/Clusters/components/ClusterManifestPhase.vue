@@ -9,6 +9,8 @@ import {
   type ClusterKubernetesManifestsStatusSpecManifestStatus,
   ClusterKubernetesManifestsStatusSpecManifestStatusPhase,
 } from '@/api/omni/specs/omni.pb'
+import StatusPill from '@/components/Status/StatusPill.vue'
+import { toneFromTextClass } from '@/components/Status/statusTone'
 
 export interface ClusterManifestsManifestNodeData {
   manifest: ClusterKubernetesManifestsStatusSpecManifestStatus
@@ -48,10 +50,7 @@ const { phase = ClusterKubernetesManifestsStatusSpecManifestStatusPhase.UNKNOWN 
 </script>
 
 <template>
-  <span
-    class="w-max rounded bg-current/20 px-1.5 py-0.5 text-[0.625rem]"
-    :class="manifestPhaseClass(phase)"
-  >
+  <StatusPill :tone="toneFromTextClass(manifestPhaseClass(phase))">
     {{ manifestPhaseName(phase) }}
-  </span>
+  </StatusPill>
 </template>

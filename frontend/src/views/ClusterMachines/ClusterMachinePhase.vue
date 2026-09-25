@@ -9,8 +9,8 @@ import type { Resource } from '@/api/grpc'
 import type { ClusterMachineStatusSpec } from '@/api/omni/specs/omni.pb'
 import { ClusterMachineStatusSpecStage } from '@/api/omni/specs/omni.pb'
 import { MachineStatusLabelConnected } from '@/api/resources'
-import type { IconType } from '@/components/Icon/TIcon.vue'
-import TIcon from '@/components/Icon/TIcon.vue'
+import StatusPill from '@/components/Status/StatusPill.vue'
+import { toneFromTextClass } from '@/components/Status/statusTone'
 import Tooltip from '@/components/Tooltip/Tooltip.vue'
 
 const connected = (machine: Resource<ClusterMachineStatusSpec>): boolean => {
@@ -57,38 +57,6 @@ const stageName = (machine: Resource<ClusterMachineStatusSpec>): string => {
   }
 }
 
-const stageIcon = (machine: Resource<ClusterMachineStatusSpec>): IconType => {
-  if (!connected(machine)) {
-    return 'unknown'
-  }
-
-  switch (machine?.spec.stage) {
-    case ClusterMachineStatusSpecStage.BOOTING:
-    case ClusterMachineStatusSpecStage.INSTALLING:
-    case ClusterMachineStatusSpecStage.UPGRADING:
-    case ClusterMachineStatusSpecStage.CONFIGURING:
-    case ClusterMachineStatusSpecStage.REBOOTING:
-    case ClusterMachineStatusSpecStage.SHUTTING_DOWN:
-      return 'loading'
-    case ClusterMachineStatusSpecStage.POWERING_ON:
-      return 'power'
-    case ClusterMachineStatusSpecStage.POWERED_OFF:
-      return 'power'
-    case ClusterMachineStatusSpecStage.RUNNING:
-      if (machine?.spec.ready) {
-        return 'check-in-circle'
-      } else {
-        return 'error'
-      }
-    case ClusterMachineStatusSpecStage.BEFORE_DESTROY:
-      return 'loading'
-    case ClusterMachineStatusSpecStage.DESTROYING:
-      return 'delete'
-    default:
-      return 'unknown'
-  }
-}
-
 const stageClass = (machine: Resource<ClusterMachineStatusSpec>): string => {
   switch (machine?.spec.stage) {
     case ClusterMachineStatusSpecStage.BOOTING:
@@ -123,19 +91,18 @@ defineProps<Props>()
 </script>
 
 <template>
-  <div :class="stageClass(machine)">
+  <div>
     <Tooltip
       placement="bottom"
       :description="
         connected(machine) ? undefined : 'The machine is unreachable. The last known state is shown'
       "
     >
-      <div class="flex items-center gap-1" :class="!connected(machine) && 'brightness-50'">
-        <TIcon :icon="stageIcon(machine)" class="h-4" />
-        <div data-testid="cluster-machine-stage-name" class="flex-1 truncate">
+      <StatusPill :tone="connected(machine) ? toneFromTextClass(stageClass(machine)) : 'info'">
+        <span data-testid="cluster-machine-stage-name" class="truncate">
           {{ stageName(machine) || '' }}
-        </div>
-      </div>
+        </span>
+      </StatusPill>
     </Tooltip>
   </div>
 </template>

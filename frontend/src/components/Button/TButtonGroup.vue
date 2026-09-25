@@ -47,7 +47,7 @@ const forwarded = useForwardPropsEmits(delegatedProps, emit)
       :key="index"
       :value="o.value"
       :disabled="o.disabled"
-      class="rounded border-naturals-n5 text-xs text-naturals-n10 transition-colors duration-200 hover:bg-naturals-n5 hover:text-naturals-n12 data-disabled:cursor-not-allowed data-disabled:text-naturals-n8 data-disabled:hover:bg-naturals-n3 data-[state=checked]:bg-naturals-n6 data-[state=checked]:text-primary-p3"
+      class="rounded border-border-strong text-xs text-naturals-n10 transition-colors duration-200 hover:bg-naturals-n5 hover:text-naturals-n12 data-disabled:cursor-not-allowed data-disabled:text-naturals-n8 data-disabled:hover:bg-naturals-n3 data-[state=checked]:bg-naturals-n6 data-[state=checked]:text-primary-p3"
     >
       <Tooltip :description="o.tooltip" placement="top">
         <span class="inline-block px-2 py-0.5">{{ o.label || o.value }}</span>

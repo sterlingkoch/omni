@@ -8,50 +8,59 @@ included in the LICENSE file.
 @import url('./fonts.css') layer(base);
 @import 'tailwindcss';
 @import 'tw-animate-css';
+@import './design-system/tokens.css';
+@import './design-system/tailwind-colour.css';
 
 @custom-variant dark (&:where(.dark, .dark *));
 
+/*
+The palette below predates the design system. Each name is kept as an alias for
+the semantic role it is used as, so existing classes pick up the shared colours.
+New code should use the role utilities (bg-surface-card, text-content-muted,
+border-border-default, text-status-danger-text, ...) rather than these names.
+*/
 @theme {
   --font-sans: Roboto, sans-serif;
   --font-mono: 'Roboto Mono', monospace;
 
-  --color-naturals-n0: #101118;
-  --color-naturals-n1: #13141c;
-  --color-naturals-n2: #15161e;
-  --color-naturals-n3: #191b24;
-  --color-naturals-n4: #1f222e;
-  --color-naturals-n5: #272932;
-  --color-naturals-n6: #2c2e38;
-  --color-naturals-n7: #3a3b45;
-  --color-naturals-n8: #5b5c64;
-  --color-naturals-n9: #7d7d85;
-  --color-naturals-n10: #878990;
-  --color-naturals-n11: #9fa1a6;
-  --color-naturals-n12: #c3c3c7;
-  --color-naturals-n13: #e8e8e9;
-  --color-naturals-n14: #ffffff;
+  --color-naturals-n0: var(--talos-surface-page);
+  --color-naturals-n1: var(--talos-surface-chrome);
+  --color-naturals-n2: var(--talos-surface-card);
+  --color-naturals-n3: var(--talos-surface-raised);
+  --color-naturals-n4: var(--talos-surface-hover);
+  --color-naturals-n5: var(--talos-surface-inert);
+  --color-naturals-n6: var(--talos-surface-inert);
+  --color-naturals-n7: var(--talos-content-disabled);
+  --color-naturals-n8: var(--talos-content-muted);
+  --color-naturals-n9: var(--talos-content-muted);
+  --color-naturals-n10: var(--talos-content-muted);
+  --color-naturals-n11: var(--talos-content-secondary);
+  --color-naturals-n12: var(--talos-content-default);
+  --color-naturals-n13: var(--talos-content-emphasis);
+  --color-naturals-n14: var(--talos-content-emphasis);
 
-  --color-primary-p1: #ffbea9;
-  --color-primary-p2: #fe9e74;
-  --color-primary-p3: #ff8b59;
-  --color-primary-p4: #ff5f2a;
-  --color-primary-p5: #ce5027;
-  --color-primary-p6: #342321;
+  --color-primary-p1: var(--talos-accent-text);
+  --color-primary-p2: var(--talos-accent-hover);
+  --color-primary-p3: var(--talos-accent-text);
+  --color-primary-p4: var(--talos-accent-fill);
+  --color-primary-p5: var(--talos-accent-fill-active);
+  --color-primary-p6: var(--talos-accent-subtle);
 
-  --color-green-g1: #69c297;
-  --color-green-g2: #2d9663;
-  --color-green-g3: #141f21;
+  --color-green-g1: var(--talos-status-success-text);
+  --color-green-g2: var(--talos-status-success-fill);
+  --color-green-g3: var(--talos-status-success-subtle);
 
-  --color-red-r1: #ff5c56;
-  --color-red-r2: #6e2f30;
-  --color-red-r3: #311c20;
+  --color-red-r1: var(--talos-status-danger-text);
+  --color-red-r2: var(--talos-status-danger-subtle-border);
+  --color-red-r3: var(--talos-status-danger-subtle);
   --color-red-rlogo: #f62d2c;
 
-  --color-yellow-y1: #ffb200;
-  --color-yellow-y2: #c68a00;
-  --color-yellow-y3: #a97809;
-  --color-yellow-y4: #252115;
+  --color-yellow-y1: var(--talos-status-warning-text);
+  --color-yellow-y2: var(--talos-status-warning-fill);
+  --color-yellow-y3: var(--talos-status-warning-subtle-border);
+  --color-yellow-y4: var(--talos-status-warning-subtle);
 
+  /* Charts, syntax and selection. Not a status colour, and not in the design system yet. */
   --color-blue-b1: #59a5ff;
 }
 

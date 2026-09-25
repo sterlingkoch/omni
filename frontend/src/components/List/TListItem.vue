@@ -24,10 +24,10 @@ defineSlots<{
 <template>
   <CollapsibleRoot
     v-slot="{ open }"
-    class="group flex w-full flex-col rounded-t-sm border-b border-naturals-n5 px-2 py-4 text-xs text-naturals-n13 transition-all duration-500 last-of-type:border-none"
+    class="group flex w-full flex-col rounded-t-sm border-b border-border-strong px-2 py-4 text-xs text-naturals-n13 transition-all duration-500 last-of-type:border-none"
     :class="
       !disableBorderOnExpand &&
-      'data-[state=open]:mt-1 data-[state=open]:rounded data-[state=open]:last-of-type:border-naturals-n6'
+      'data-[state=open]:mt-1 data-[state=open]:rounded data-[state=open]:last-of-type:border-border-strong'
     "
     role="row"
     :default-open="isDefaultOpened"
@@ -36,7 +36,7 @@ defineSlots<{
       <div class="flex items-center gap-1">
         <CollapsibleTrigger
           v-if="$slots.details"
-          class="cursor-pointer rounded transition-colors hover:bg-naturals-n7"
+          class="cursor-pointer rounded transition-colors hover:bg-surface-inert"
           :aria-label="open ? 'Collapse details' : 'Expand details'"
         >
           <TIcon

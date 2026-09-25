@@ -48,6 +48,6 @@ code {
 }
 
 button {
-  @apply rounded border border-naturals-n6 bg-naturals-n4 px-1 py-0.5 transition-colors duration-200 hover:border-naturals-n8 hover:bg-naturals-n6 hover:text-naturals-n13;
+  @apply rounded border border-border-strong bg-naturals-n4 px-1 py-0.5 transition-colors duration-200 hover:border-border-strong hover:bg-naturals-n6 hover:text-naturals-n13;
 }
 </style>

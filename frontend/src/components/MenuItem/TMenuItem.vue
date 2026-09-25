@@ -123,7 +123,7 @@ const componentAttributes = computed(() => {
 
           <div
             v-if="subItems?.length"
-            class="-my-1 flex h-5 w-5 items-center justify-center rounded-md border border-transparent bg-naturals-n4 transition-colors duration-200 group-hover/item:border-naturals-n7 group-hover/item:bg-naturals-n2"
+            class="-my-1 flex h-5 w-5 items-center justify-center rounded-md border border-transparent bg-naturals-n4 transition-colors duration-200 group-hover/item:border-border-strong group-hover/item:bg-naturals-n2"
             role="button"
             @click.stop.prevent="() => toggleSubmenu(true)"
           >
@@ -138,7 +138,7 @@ const componentAttributes = computed(() => {
         <div
           v-if="expanded"
           class="relative overflow-hidden"
-          :class="{ 'border-y border-naturals-n4 bg-naturals-n0': level === 0 }"
+          :class="{ 'border-y border-border-default bg-naturals-n0': level === 0 }"
         >
           <div
             v-for="(item, index) in subItems ?? []"
@@ -148,7 +148,7 @@ const componentAttributes = computed(() => {
             <div
               class="absolute top-0 z-20 mx-5 h-4 border-b-2 border-l-2 transition-colors duration-200"
               :class="[
-                index <= selectedIndex ? 'border-primary-p2' : 'border-naturals-n8',
+                index <= selectedIndex ? 'border-primary-p2' : 'border-border-strong',
                 { 'w-2': index === (subItems?.length || 0) - 1 || item.route === $route.path },
               ]"
               :style="linePadding"
@@ -156,7 +156,7 @@ const componentAttributes = computed(() => {
             <div
               v-if="index !== (subItems?.length ?? 0) - 1"
               class="absolute top-4 bottom-0 z-20 mx-5 w-2 border-l-2 transition-colors duration-200"
-              :class="index < selectedIndex ? 'border-primary-p2' : 'border-naturals-n8'"
+              :class="index < selectedIndex ? 'border-primary-p2' : 'border-border-strong'"
               :style="linePadding"
             />
             <TMenuItem

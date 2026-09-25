@@ -95,7 +95,7 @@ const roles = computed(() =>
 @reference "../../../index.css";
 
 .nodes-list-item {
-  @apply flex items-center border-b border-naturals-n4 px-4 py-4;
+  @apply flex items-center border-b border-border-default px-4 py-4;
 }
 
 .nodes-list-item > p {

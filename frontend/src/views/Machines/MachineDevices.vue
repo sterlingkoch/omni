@@ -164,7 +164,7 @@ function isLastChild(item?: DeviceTreeItem) {
         >
           <div
             v-if="item.hasChildren"
-            class="flex h-7.5 items-center justify-between gap-2 rounded-lg bg-naturals-n1 pr-2 pl-4 group-focus-visible/tree-item:ring-2 group-focus-visible/tree-item:ring-naturals-n6 hover:bg-naturals-n6"
+            class="flex h-7.5 items-center justify-between gap-2 rounded-lg bg-naturals-n1 pr-2 pl-4 group-focus-visible/tree-item:ring-2 group-focus-visible/tree-item:ring-border-strong hover:bg-naturals-n6"
           >
             <div class="flex min-w-0 items-center gap-4">
               <TIcon :icon="item.value.icon" class="size-4 shrink-0 text-naturals-n14" />
@@ -185,16 +185,16 @@ function isLastChild(item?: DeviceTreeItem) {
 
           <template v-else>
             <div
-              class="pointer-events-none absolute top-px left-6.75 border-l-2 border-naturals-n8"
+              class="pointer-events-none absolute top-px left-6.75 border-l-2 border-border-strong"
               :class="isLastChild(asDevice(item.value as DeviceTreeItem)) ? 'h-1/2' : 'h-full'"
             ></div>
 
             <div
-              class="pointer-events-none absolute top-px left-6.75 h-1/2 w-2 border-b-2 border-naturals-n8"
+              class="pointer-events-none absolute top-px left-6.75 h-1/2 w-2 border-b-2 border-border-strong"
             ></div>
 
             <div
-              class="flex h-7.5 items-center gap-2 rounded px-1 group-focus-visible/tree-item:ring-2 group-focus-visible/tree-item:ring-naturals-n6"
+              class="flex h-7.5 items-center gap-2 rounded px-1 group-focus-visible/tree-item:ring-2 group-focus-visible/tree-item:ring-border-strong"
             >
               <span class="min-w-0 truncate">{{ item.value.label }}</span>
 

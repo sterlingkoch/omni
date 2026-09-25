@@ -151,13 +151,13 @@ useTitle(['Machines', 'Installation Media', 'Create'])
     </div>
 
     <div
-      class="flex w-full shrink-0 items-center gap-4 border-t border-naturals-n4 bg-naturals-n1 px-4 max-md:flex-col max-md:p-4 md:h-16 md:justify-end"
+      class="flex w-full shrink-0 items-center gap-4 border-t border-border-default bg-naturals-n1 px-4 max-md:flex-col max-md:p-4 md:h-16 md:justify-end"
     >
       <div v-if="currentFlowSteps && !isFirstStep" class="flex grow gap-4">
         <Tooltip description="Reset wizard">
           <button
             type="button"
-            class="group isolate size-6 shrink-0 overflow-hidden rounded-sm border border-red-r1 p-0.5 text-red-r1 transition hover:bg-red-r1 hover:text-naturals-n1 active:brightness-75"
+            class="group isolate size-6 shrink-0 overflow-hidden rounded-sm border border-red-r1 p-0.5 text-red-r1 transition hover:bg-status-danger-fill hover:text-status-danger-on-fill active:brightness-75"
             @click="formState = {}"
           >
             <TIcon icon="close" class="size-full" aria-label="reset wizard" />

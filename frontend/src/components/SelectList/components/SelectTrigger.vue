@@ -35,7 +35,7 @@ const forwarded = useForwardProps(delegatedProps)
       cn(
         'flex max-h-full w-full items-center justify-between gap-1 rounded text-naturals-n14 transition-colors disabled:cursor-not-allowed disabled:opacity-50',
         {
-          'border border-naturals-n7 bg-naturals-n2 px-3 py-2.25 text-xs': variant === 'default',
+          'border border-border-strong bg-naturals-n2 px-3 py-2.25 text-xs': variant === 'default',
           'p-2 leading-none hover:bg-naturals-n4': variant === 'breadcrumb',
         },
         props.class,

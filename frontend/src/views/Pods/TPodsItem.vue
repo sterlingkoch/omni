@@ -46,12 +46,12 @@ const age = computed(() => {
 <template>
   <CollapsibleRoot
     v-slot="{ open }"
-    class="group relative mb-1 flex w-full min-w-md flex-col border py-4.75 pr-3.5 pl-2 transition-all duration-500 not-data-[state=open]:rounded-t-sm not-data-[state=open]:border-transparent not-data-[state=open]:border-b-naturals-n5 not-data-[state=open]:last-of-type:border-b-transparent data-[state=open]:rounded data-[state=open]:border-naturals-n5"
+    class="group relative mb-1 flex w-full min-w-md flex-col border py-4.75 pr-3.5 pl-2 transition-all duration-500 not-data-[state=open]:rounded-t-sm not-data-[state=open]:border-transparent not-data-[state=open]:border-b-border-strong not-data-[state=open]:last-of-type:border-b-transparent data-[state=open]:rounded data-[state=open]:border-border-strong"
   >
     <ul class="flex w-full items-center justify-start">
       <li class="flex w-1/6 items-center gap-1 text-xs text-naturals-n13">
         <CollapsibleTrigger
-          class="cursor-pointer rounded transition-colors hover:bg-naturals-n7"
+          class="cursor-pointer rounded transition-colors hover:bg-surface-inert"
           :aria-label="open ? 'Collapse details' : 'Expand details'"
         >
           <TIcon

@@ -219,7 +219,7 @@ const { canDownloadSupportBundle } = useClusterPermissions(computed(() => cluste
       <div
         v-for="source in sortedSources"
         :key="source"
-        class="flex flex-col divide-y divide-naturals-n6 rounded-md border border-naturals-n6 text-xs"
+        class="flex flex-col divide-y divide-border-strong rounded-md border border-border-strong text-xs"
       >
         <div class="flex items-center gap-2 overflow-x-hidden p-3 px-3 text-naturals-n12">
           <IconButton

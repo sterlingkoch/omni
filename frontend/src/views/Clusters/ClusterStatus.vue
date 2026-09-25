@@ -8,8 +8,8 @@ included in the LICENSE file.
 import type { Resource } from '@/api/grpc'
 import type { ClusterStatusSpec } from '@/api/omni/specs/omni.pb'
 import { ClusterStatusSpecPhase } from '@/api/omni/specs/omni.pb'
-import type { IconType } from '@/components/Icon/TIcon.vue'
-import TIcon from '@/components/Icon/TIcon.vue'
+import StatusPill from '@/components/Status/StatusPill.vue'
+import { toneFromTextClass } from '@/components/Status/statusTone'
 
 type Props = {
   cluster?: Resource<ClusterStatusSpec>
@@ -36,24 +36,6 @@ const phaseName = (cluster?: Resource<ClusterStatusSpec>): string => {
   }
 }
 
-const phaseIcon = (cluster?: Resource<ClusterStatusSpec>): IconType => {
-  switch (cluster?.spec.phase) {
-    case ClusterStatusSpecPhase.SCALING_UP:
-    case ClusterStatusSpecPhase.SCALING_DOWN:
-      return 'loading'
-    case ClusterStatusSpecPhase.RUNNING:
-      if (cluster?.spec.ready) {
-        return 'check-in-circle'
-      } else {
-        return 'error'
-      }
-    case ClusterStatusSpecPhase.DESTROYING:
-      return 'delete'
-    default:
-      return 'unknown'
-  }
-}
-
 const phaseClass = (cluster?: Resource<ClusterStatusSpec>): string => {
   switch (cluster?.spec.phase) {
     case ClusterStatusSpecPhase.SCALING_UP:
@@ -74,8 +56,7 @@ const phaseClass = (cluster?: Resource<ClusterStatusSpec>): string => {
 </script>
 
 <template>
-  <div :class="phaseClass(cluster)" class="flex items-center gap-1">
-    <TIcon :icon="phaseIcon(cluster)" class="h-4" aria-hidden="true" />
-    <span class="contents max-sm:sr-only">{{ phaseName(cluster) }}</span>
-  </div>
+  <StatusPill :tone="toneFromTextClass(phaseClass(cluster))">
+    {{ phaseName(cluster) }}
+  </StatusPill>
 </template>

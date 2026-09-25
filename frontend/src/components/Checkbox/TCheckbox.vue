@@ -25,7 +25,7 @@ const checked = defineModel<boolean>({ default: false })
     <CheckboxRoot
       v-model="checked"
       :disabled
-      class="flex size-3.5 items-center justify-center rounded-xs border border-naturals-n7 transition-colors data-disabled:border-naturals-n5 data-disabled:bg-naturals-n4 not-data-disabled:data-[state=checked]:border-primary-p6 not-data-disabled:data-[state=checked]:bg-primary-p6"
+      class="flex size-3.5 items-center justify-center rounded-xs border border-border-strong transition-colors data-disabled:border-border-strong data-disabled:bg-naturals-n4 not-data-disabled:data-[state=checked]:border-primary-p6 not-data-disabled:data-[state=checked]:bg-primary-p6"
     >
       <CheckboxIndicator class="transition-opacity data-[state=unchecked]:opacity-0" force-mount>
         <TIcon

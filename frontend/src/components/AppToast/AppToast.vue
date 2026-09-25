@@ -23,7 +23,7 @@ import TIcon from '@/components/Icon/TIcon.vue'
     :toast-options="{
       unstyled: true,
       classes: {
-        toast: 'flex w-sm gap-2 rounded border border-naturals-n5 bg-naturals-n0 p-2',
+        toast: 'flex w-sm gap-2 rounded border border-border-strong bg-naturals-n0 p-2',
         closeButton:
           'absolute top-2 right-2 rounded-full bg-naturals-n7 p-0.5 text-naturals-n14 hover:bg-naturals-n6 active:bg-naturals-n5',
         icon: 'size-5 shrink-0 self-center *:size-full',

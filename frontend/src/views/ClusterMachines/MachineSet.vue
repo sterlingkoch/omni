@@ -165,7 +165,7 @@ function isMachineSetScalable(
     v-if="machines.length > 0 || requests.length > 0"
     as="section"
     :value="machineSetId"
-    class="grid border-t-8 border-naturals-n4 text-naturals-n14"
+    class="grid border-t-8 border-border-default text-naturals-n14"
     :class="
       isSubgrid ? 'col-span-full grid-cols-subgrid' : 'grid-cols-[repeat(4,1fr)_--spacing(24)]'
     "
@@ -235,7 +235,7 @@ function isMachineSetScalable(
         v-for="machine in machines"
         :id="machine.metadata.id"
         :key="machine.metadata.id"
-        class="border-t border-naturals-n4 last-of-type:rounded-b-md"
+        class="border-t border-border-default last-of-type:rounded-b-md"
         :has-diagnostic-info="nodesWithDiagnostics?.has(machine.metadata.id!)"
         :machine="machine"
         :remove-disabled="!canRemoveMachine"
@@ -244,14 +244,14 @@ function isMachineSetScalable(
       <MachineRequest
         v-for="request in requests"
         :key="request.metadata.id"
-        class="border-t border-naturals-n4 last-of-type:rounded-b-md"
+        class="border-t border-border-default last-of-type:rounded-b-md"
         :request-status="request"
         :can-destroy="canRemoveClusterMachines"
       />
 
       <div
         v-if="hiddenMachinesCount > 0"
-        class="col-span-full flex items-center gap-1 border-t border-naturals-n4 p-4 pl-9 text-xs"
+        class="col-span-full flex items-center gap-1 border-t border-border-default p-4 pl-9 text-xs"
       >
         {{ pluralize('machine', hiddenMachinesCount, true) }} are hidden
         <TButton variant="subtle" size="xs" @click="showMachinesCount = undefined">

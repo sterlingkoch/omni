@@ -4,3 +4,4 @@ src/schemas/*.schema.json
 .storybook/public/mockServiceWorker.js
 typed-router.d.ts
 eslint-suppressions.json
+src/design-system/

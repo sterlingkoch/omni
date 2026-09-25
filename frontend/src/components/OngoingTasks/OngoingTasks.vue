@@ -37,7 +37,7 @@ const dropdownOpen = ref(false)
 
     <PopoverPortal>
       <PopoverContent
-        class="z-30 max-h-(--reka-popover-content-available-height) max-w-[min(--spacing(80),var(--reka-popover-content-available-width))] min-w-(--reka-popover-trigger-width) origin-(--reka-popover-content-transform-origin) overflow-auto rounded border border-naturals-n4 bg-naturals-n2 slide-in-from-top-2 data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=closed]:zoom-out-95 data-[state=open]:animate-in data-[state=open]:fade-in-0 data-[state=open]:zoom-in-95"
+        class="z-30 max-h-(--reka-popover-content-available-height) max-w-[min(--spacing(80),var(--reka-popover-content-available-width))] min-w-(--reka-popover-trigger-width) origin-(--reka-popover-content-transform-origin) overflow-auto rounded border border-border-default bg-naturals-n2 slide-in-from-top-2 data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=closed]:zoom-out-95 data-[state=open]:animate-in data-[state=open]:fade-in-0 data-[state=open]:zoom-in-95"
         :side-offset="10"
         align="end"
         side="bottom"
@@ -45,7 +45,7 @@ const dropdownOpen = ref(false)
         <div
           v-for="{ item, desc } in data"
           :key="item.metadata.id"
-          class="flex flex-col gap-2 border-naturals-n4 p-6 not-last:border-b"
+          class="flex flex-col gap-2 border-border-default p-6 not-last:border-b"
         >
           <div class="flex items-center justify-between gap-4">
             <h3 class="truncate text-xs text-naturals-n13">

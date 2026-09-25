@@ -64,6 +64,6 @@ defineProps<{
   @apply flex items-center;
 }
 .menu__exit-button {
-  @apply h-6 w-6 cursor-pointer fill-current text-naturals-n7 transition-colors hover:text-naturals-n8;
+  @apply h-6 w-6 cursor-pointer fill-current text-content-muted transition-colors hover:text-naturals-n8;
 }
 </style>

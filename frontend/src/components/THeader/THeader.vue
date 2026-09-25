@@ -65,7 +65,7 @@ function dismissNotification(id: string) {
 <template>
   <div class="flex flex-col">
     <header
-      class="flex h-12 items-center justify-between border-b border-naturals-n4 bg-naturals-n1 px-3 md:h-13 md:px-6"
+      class="flex h-12 items-center justify-between border-b border-border-default bg-naturals-n1 px-3 md:h-13 md:px-6"
     >
       <div class="flex items-center gap-4">
         <TButton
@@ -116,9 +116,9 @@ function dismissNotification(id: string) {
       v-if="currentNotification"
       class="flex items-center justify-end gap-6 px-6 py-2 transition-colors"
       :class="{
-        'bg-red-r1/15': currentNotification.spec.type === NotificationSpecType.ERROR,
-        'bg-yellow-y1/15': currentNotification.spec.type === NotificationSpecType.WARNING,
-        'bg-blue-b1/15': currentNotification.spec.type === NotificationSpecType.INFO,
+        'bg-status-danger-subtle': currentNotification.spec.type === NotificationSpecType.ERROR,
+        'bg-status-warning-subtle': currentNotification.spec.type === NotificationSpecType.WARNING,
+        'bg-status-info-subtle': currentNotification.spec.type === NotificationSpecType.INFO,
       }"
     >
       <div class="flex items-center gap-2">
@@ -126,9 +126,10 @@ function dismissNotification(id: string) {
           class="size-4 shrink-0 transition-colors"
           :icon="getIcon(currentNotification.spec.type!)"
           :class="{
-            'text-red-r1': currentNotification.spec.type === NotificationSpecType.ERROR,
-            'text-yellow-y1': currentNotification.spec.type === NotificationSpecType.WARNING,
-            'text-blue-b1': currentNotification.spec.type === NotificationSpecType.INFO,
+            'text-status-danger-text': currentNotification.spec.type === NotificationSpecType.ERROR,
+            'text-status-warning-text':
+              currentNotification.spec.type === NotificationSpecType.WARNING,
+            'text-status-info-text': currentNotification.spec.type === NotificationSpecType.INFO,
           }"
         />
         <span class="text-xs text-naturals-n14">

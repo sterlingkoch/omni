@@ -132,7 +132,7 @@ const organizedDisks = computed(() =>
       class="overflow-hidden rounded-lg"
       :aria-labelledby="`disk-${diskInfo.disk.metadata.id}-title`"
     >
-      <div class="border-b border-naturals-n6 bg-naturals-n3 p-4">
+      <div class="border-b border-border-strong bg-naturals-n3 p-4">
         <div class="flex items-center justify-between">
           <div class="flex items-center gap-3">
             <TIcon icon="server" class="size-6 text-naturals-n13" />
@@ -164,7 +164,7 @@ const organizedDisks = computed(() =>
               </span>
               <span
                 v-if="diskInfo.disk.spec.readonly"
-                class="rounded bg-yellow-y1/20 px-2 py-1 text-xs text-yellow-y1"
+                class="rounded bg-status-warning-subtle px-2 py-1 text-xs text-status-warning-text ring-1 ring-status-warning-subtle-border ring-inset"
               >
                 Read-only
               </span>

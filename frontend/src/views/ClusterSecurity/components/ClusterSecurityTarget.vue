@@ -89,7 +89,7 @@ const upgradeVersionScans = computed(() => {
 </script>
 
 <template>
-  <article class="flex flex-col gap-4 rounded border border-naturals-n5 p-4">
+  <article class="flex flex-col gap-4 rounded border border-border-strong p-4">
     <header class="flex flex-col gap-1">
       <h2 class="flex items-center gap-1 text-sm text-naturals-n13">
         <TIcon aria-hidden="true" icon="document-text" class="size-4" />

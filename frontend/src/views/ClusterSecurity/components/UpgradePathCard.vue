@@ -36,7 +36,7 @@ const canExpand = computed(
 </script>
 
 <template>
-  <div class="rounded border border-naturals-n5 bg-naturals-n2">
+  <div class="rounded border border-border-strong bg-naturals-n2">
     <div class="flex flex-wrap items-center gap-3 px-4 py-3">
       <TIcon icon="upgrade" class="size-5 shrink-0 text-naturals-n11" aria-hidden="true" />
 
@@ -98,7 +98,7 @@ const canExpand = computed(
 
     <div
       v-else-if="expanded && diff"
-      class="flex flex-col gap-4 border-t border-naturals-n5 px-4 py-3"
+      class="flex flex-col gap-4 border-t border-border-strong px-4 py-3"
     >
       <section v-if="diff.resolved.length" class="flex flex-col gap-2">
         <h4 class="flex items-center gap-1.5 text-xs font-medium text-green-g1">

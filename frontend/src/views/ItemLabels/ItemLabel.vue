@@ -37,19 +37,23 @@ const description = computed(() => {
 <template>
   <Tooltip :description="description" :delay-duration="500" placement="bottom-start">
     <button
-      class="resource-label inline-flex items-center gap-1"
-      :class="[label.labelClass, small ? 'max-w-50' : 'max-w-75']"
+      class="inline-flex items-center gap-1 rounded-sm border border-border-strong px-2 py-1 text-xs text-content-default transition-colors hover:bg-surface-hover"
+      :class="small ? 'max-w-50' : 'max-w-75'"
       v-bind="$attrs"
       @click.stop="$emit('selectLabel')"
     >
       <TIcon v-if="label.icon" :icon="label.icon" class="-ml-1 size-3.5 shrink-0" />
       <span class="truncate">
-        {{ label.value ? `${label.id}:${label.value}` : label.id }}
+        <template v-if="label.value">
+          <span class="text-content-secondary">{{ label.id }}:</span>
+          {{ label.value }}
+        </template>
+        <template v-else>{{ label.id }}</template>
       </span>
       <TIcon
         v-if="label.removable"
         icon="close"
-        class="-mr-1 size-3 shrink-0 cursor-pointer rounded-full transition-all hover:bg-naturals-n14 hover:text-naturals-n1"
+        class="-mr-1 size-3 shrink-0 cursor-pointer rounded-full transition-all hover:bg-surface-inert hover:text-content-emphasis"
         @click.stop="$emit('removeLabel')"
       />
     </button>

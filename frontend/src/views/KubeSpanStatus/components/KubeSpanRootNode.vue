@@ -23,7 +23,7 @@ const { dimensions, data } = defineProps<NodeProps<KubeSpanRootNodeData>>()
 </script>
 
 <template>
-  <div class="w-full rounded-lg border border-naturals-n6 bg-naturals-n2 shadow-lg/40">
+  <div class="w-full rounded-lg border border-border-strong bg-naturals-n2 shadow-lg/40">
     <div
       class="flex items-center gap-1 rounded-[7px] border border-primary-p3 bg-naturals-n2 px-3"
       :style="{ height: `${dimensions.height}px` }"

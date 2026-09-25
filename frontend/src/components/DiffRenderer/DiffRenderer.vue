@@ -340,10 +340,18 @@ function prevMatch() {
   --diffs-header-font-family: var(--font-sans);
   --diffs-tab-size: 2;
 
-  /* Without these the diff tints are derived from the Shiki theme. */
-  --diffs-addition-color-override: var(--color-green-g1);
-  --diffs-deletion-color-override: var(--color-red-r1);
-  --diffs-modified-color-override: var(--color-yellow-y1);
+  /* Without these the diff tints are derived from the Shiki theme, and the
+     syntax colors lose contrast on them. */
+  --diffs-addition-color-override: var(--color-status-success-text);
+  --diffs-deletion-color-override: var(--color-status-danger-text);
+  --diffs-modified-color-override: var(--color-status-warning-text);
+  --diffs-bg-addition-override: var(--color-status-success-subtle);
+  --diffs-bg-addition-number-override: var(--color-status-success-subtle);
+  --diffs-bg-addition-emphasis-override: var(--color-status-success-subtle-border);
+  --diffs-bg-deletion-override: var(--color-status-danger-subtle);
+  --diffs-bg-deletion-number-override: var(--color-status-danger-subtle);
+  --diffs-bg-deletion-emphasis-override: var(--color-status-danger-subtle-border);
+  --diffs-bg-separator-override: var(--color-surface-raised);
 
   /* Search match highlight. Blue because green, red and orange are all taken
      by added, removed and changed lines respectively. */

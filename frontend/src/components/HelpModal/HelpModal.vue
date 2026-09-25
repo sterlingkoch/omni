@@ -91,7 +91,7 @@ const icsUrl = computed(() => {
           </span>
         </div>
         <TIcon
-          class="size-4 shrink-0 text-naturals-n7 transition-colors group-hover:text-naturals-n10"
+          class="size-4 shrink-0 text-content-muted transition-colors group-hover:text-naturals-n10"
           icon="external-link"
         />
       </a>
@@ -116,7 +116,7 @@ const icsUrl = computed(() => {
           <span class="text-xs text-naturals-n9">Guides, API references, and tutorials</span>
         </div>
         <TIcon
-          class="size-4 shrink-0 text-naturals-n7 transition-colors group-hover:text-naturals-n10"
+          class="size-4 shrink-0 text-content-muted transition-colors group-hover:text-naturals-n10"
           icon="external-link"
         />
       </a>
@@ -181,7 +181,7 @@ const icsUrl = computed(() => {
           <span class="text-xs text-naturals-n9">Chat with the community on Slack and more</span>
         </div>
         <TIcon
-          class="size-4 shrink-0 text-naturals-n7 transition-colors group-hover:text-naturals-n10"
+          class="size-4 shrink-0 text-content-muted transition-colors group-hover:text-naturals-n10"
           icon="external-link"
         />
       </a>

@@ -122,7 +122,7 @@ useTitle('Extra Args')
       <Expandable
         v-model:expanded="embeddedConfigExpanded"
         title="Embedded machine configuration"
-        class="data-[state=closed]:h-50 data-[state=closed]:overflow-hidden data-[state=closed]:rounded data-[state=closed]:border data-[state=closed]:border-naturals-n8"
+        class="data-[state=closed]:h-50 data-[state=closed]:overflow-hidden data-[state=closed]:rounded data-[state=closed]:border data-[state=closed]:border-border-strong"
       >
         <CodeEditor
           v-model="formState.embeddedMachineConfig"
@@ -168,7 +168,7 @@ useTitle('Extra Args')
       <Expandable
         v-model:expanded="overlayOptionsExpanded"
         title="Extra overlay options (advanced)"
-        class="data-[state=closed]:h-50 data-[state=closed]:overflow-hidden data-[state=closed]:rounded data-[state=closed]:border data-[state=closed]:border-naturals-n8"
+        class="data-[state=closed]:h-50 data-[state=closed]:overflow-hidden data-[state=closed]:rounded data-[state=closed]:border data-[state=closed]:border-border-strong"
       >
         <CodeEditor
           v-model="formState.overlayOptions"

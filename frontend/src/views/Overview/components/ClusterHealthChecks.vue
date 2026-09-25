@@ -69,7 +69,7 @@ const kubectlLogs = (spec: KubernetesHealthCheckStatusSpec) =>
       <span class="flex-1 text-sm text-naturals-n13">Health Checks</span>
     </div>
 
-    <div class="flex flex-col gap-2 border-t-8 border-naturals-n4 p-4 text-xs">
+    <div class="flex flex-col gap-2 border-t-8 border-border-default p-4 text-xs">
       <div
         v-for="check in healthChecks"
         :key="check.metadata.id"

@@ -88,7 +88,7 @@ const secureBoot = computed(() => {
 </script>
 
 <template>
-  <div class="flex flex-col gap-2 border-l-naturals-n4 bg-naturals-n0 p-4 md:border-l">
+  <div class="flex flex-col gap-2 border-l-border-default bg-naturals-n0 p-4 md:border-l">
     <div class="flex justify-between gap-2">
       <h2 class="truncate font-medium text-naturals-n14">{{ machineName }}</h2>
 

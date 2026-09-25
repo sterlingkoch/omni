@@ -43,7 +43,7 @@ const errors = computed(() => {
 </script>
 
 <template>
-  <Disclosure as="div" class="border-t border-naturals-n4" default-open>
+  <Disclosure as="div" class="border-t border-border-default" default-open>
     <template #default="{ open }">
       <DisclosureButton as="div" class="disclosure">
         <div class="title">
@@ -87,7 +87,7 @@ const errors = computed(() => {
           </div>
         </template>
         <template v-else>
-          <p class="my-1 items-center justify-start px-6 py-1.5 text-xs text-naturals-n7">
+          <p class="my-1 items-center justify-start px-6 py-1.5 text-xs text-content-muted">
             No exposed services
           </p>
         </template>
@@ -130,7 +130,7 @@ const errors = computed(() => {
 }
 
 .expand-button {
-  @apply -my-1 flex h-5 w-5 items-center justify-center rounded-md border border-transparent bg-naturals-n4 transition-colors duration-200 hover:border-naturals-n7;
+  @apply -my-1 flex h-5 w-5 items-center justify-center rounded-md border border-transparent bg-naturals-n4 transition-colors duration-200 hover:border-border-strong;
 }
 
 .title:hover .expand-button {

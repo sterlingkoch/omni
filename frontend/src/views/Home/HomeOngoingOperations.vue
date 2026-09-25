@@ -23,7 +23,7 @@ const { data } = useOngoingTasks()
     <div
       v-for="{ item, summary } in data"
       :key="item.metadata.id"
-      class="flex items-center gap-3 border-t border-naturals-n4 px-4 py-3"
+      class="flex items-center gap-3 border-t border-border-default px-4 py-3"
     >
       <TIcon
         icon="loading"

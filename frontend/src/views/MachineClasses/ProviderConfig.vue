@@ -102,10 +102,10 @@ const setInfraProvider = (item: Resource<InfraProviderStatusSpec>) => {
 @reference "../../index.css";
 
 .provider-item {
-  @apply min-w-fit cursor-pointer rounded border border-naturals-n6 bg-naturals-n2 p-3 transition-colors duration-200 hover:border-naturals-n8 hover:bg-naturals-n3 max-md:flex-1;
+  @apply min-w-fit cursor-pointer rounded border border-border-strong bg-naturals-n2 p-3 transition-colors duration-200 hover:border-border-strong hover:bg-naturals-n3 max-md:flex-1;
 }
 
 .selected {
-  @apply border-naturals-n9 bg-naturals-n3;
+  @apply border-border-strong bg-naturals-n3;
 }
 </style>

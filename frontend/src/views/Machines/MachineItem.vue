@@ -140,7 +140,7 @@ const canUseLifecycleUpgrade = computed(() => {
 </script>
 
 <template>
-  <div class="border-b-naturals-n5 not-last-of-type:border-b">
+  <div class="border-b-border-strong not-last-of-type:border-b">
     <div
       class="grid grid-cols-[auto_1fr] gap-1 border-l-4 px-2 py-4"
       :class="panelOpen ? 'border-l-primary-p2' : 'border-l-transparent'"
@@ -149,7 +149,7 @@ const canUseLifecycleUpgrade = computed(() => {
 
       <div
         class="flex items-center gap-2 overflow-hidden text-xs text-naturals-n13"
-        :class="{ 'opacity-50': machine.spec.tearing_down }"
+        :class="{ 'text-content-muted': machine.spec.tearing_down }"
       >
         <h2 class="list-item-link truncate">
           <RouterLink :to="{ name: 'MachineLogs', params: { machine: machine.metadata.id! } }">

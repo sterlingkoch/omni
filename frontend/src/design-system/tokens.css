@@ -1,0 +1,373 @@
+/* talos-design-system v0.3.4, dist/tokens.css */
+/*
+ * Talos Design System tokens. GENERATED FILE, DO NOT EDIT.
+ *
+ * Source: tokens/ in @siderolabs/talos-design-system. Change a value there, run
+ * `npm run build`, and every product picks it up on its next version bump.
+ */
+
+:root {
+  /* ink */
+  --talos-ink-0: #060606;  /* Content well, the darkest plane */
+  --talos-ink-1: #0B0B0B;  /* Chrome canvas (topbar, sidenav) */
+  --talos-ink-2: #1A1A1E;  /* Cards, tables */
+  --talos-ink-3: #1E1E22;  /* Inputs, secondary buttons, modals */
+  --talos-ink-4: #26262B;  /* Hover, tertiary fills */
+  --talos-ink-5: #2E2E33;  /* Chart grid, inert fills */
+  --talos-ink-6: #5A5A58;  /* Disabled only. Below AA as text by design. */
+  --talos-ink-7: #8A8A88;  /* Hints, placeholders, timestamps, footers: anything a person needs to read that is not body copy */
+  --talos-ink-8: #A8A8A6;  /* Labels, eyebrows, column headers */
+  --talos-ink-9: #C8C8C6;  /* Body text */
+  --talos-ink-10: #F5F5F4;  /* Headings, emphasis */
+
+  /* cream */
+  --talos-cream-0: #F2EDE8;  /* Content well. One barely visible step below the chrome, the same 1.03 luminance ratio as ink 0 to 1. Lighter than the #EDE9E4 the reference skin shipped, which is too dark for accent text. */
+  --talos-cream-1: #F5F0EB;  /* Chrome canvas (topbar, sidenav) */
+  --talos-cream-2: #FFFFFF;  /* Cards, tables */
+  --talos-cream-3: #F0EBE5;  /* Inputs, secondary buttons */
+  --talos-cream-4: #E6E1DC;  /* Hover, tertiary fills */
+  --talos-cream-5: #D8D2CB;  /* Chart grid, inert fills */
+  --talos-cream-6: #8A8A88;  /* Disabled only. Below AA as text by design. */
+  --talos-cream-7: #686866;  /* Hints, placeholders, timestamps, footers: anything a person needs to read that is not body copy */
+  --talos-cream-8: #4F4F4D;  /* Labels, eyebrows, column headers */
+  --talos-cream-9: #3A3A38;  /* Body text */
+  --talos-cream-10: #1A1A18;  /* Headings, emphasis */
+
+  /* red */
+  --talos-red-1: #E48E96;  /* Tinted. Accent text on dark surfaces. */
+  --talos-red-2: #DB6973;  /* Hover for accent-coloured text and icons on dark */
+  --talos-red-3: #E12D46;  /* Product accent. Icons, borders, active indicators, and the solid fill under a white label (4.50:1). The centre of the banner gradient. */
+  --talos-red-4: #D41A3B;  /* Shaded. Accent text on light surfaces: 4.50:1 on the page well, 4.62:1 on the chrome, 5.24:1 on white. */
+  --talos-red-5: #B93B46;  /* Fill hover, and link hover on light. */
+  --talos-red-6: #A83640;  /* Shaded further. */
+  --talos-red-7: #8F2D36;  /* Deep. Fill pressed / active. */
+
+  /* gradient */
+  --talos-gradient-display-1: #E8312C;  /* Hot red. 4.28:1 under white. */
+  --talos-gradient-display-2: #E2335A;  /* Pink. 4.33:1 under white. */
+  --talos-gradient-display-3: #F77216;  /* Orange. 2.85:1 under white. */
+
+  /* green */
+  --talos-green-1: #E6F0E7;  /* Pastel. Large status surface and chip background on light (12% of the fill into white, OKLab). */
+  --talos-green-2: #C0DAC4;  /* Chip edge on light (30% of the fill into white). */
+  --talos-green-3: #A0C8A7;  /* Large-surface border on light (45% of the fill into white). */
+  --talos-green-4: #6FD087;  /* Success text and graphics on dark. */
+  --talos-green-5: #1B8641;  /* Fill, under a white label (4.63:1). The 3px edge on dark status surfaces. */
+  --talos-green-6: #046E31;  /* Success text and graphics on light. */
+  --talos-green-7: #23432E;  /* Chip edge on dark (40% of the fill into the dark card). */
+  --talos-green-8: #213428;  /* Chip background on dark (26% of the fill into the dark card). */
+
+  /* amber */
+  --talos-amber-1: #FEEED9;  /* Pastel. Large status surface and chip background on light (22% of the fill into white). */
+  --talos-amber-2: #FDE8CB;  /* Chip edge on light (30%). */
+  --talos-amber-3: #FCDCB0;  /* Large-surface border on light (45%). */
+  --talos-amber-4: #F5AE39;  /* Fill, under a dark label. The 3px edge on dark status surfaces. */
+  --talos-amber-5: #E6AC3D;  /* Warning text and graphics on dark. */
+  --talos-amber-6: #7E5905;  /* Warning text and graphics on light. */
+  --talos-amber-7: #695132;  /* Chip edge on dark (40%). */
+  --talos-amber-8: #403529;  /* Chip background on dark (20%). */
+
+  /* scarlet */
+  --talos-scarlet-1: #FFECEA;  /* Pastel. Large status surface and chip background on light (10% of the fill into white). */
+  --talos-scarlet-2: #FDC7C0;  /* Chip edge on light (30%). */
+  --talos-scarlet-3: #FAABA1;  /* Large-surface border on light (45%). */
+  --talos-scarlet-4: #FF5B5B;  /* Danger text and graphics on dark. */
+  --talos-scarlet-5: #DE2F2E;  /* Fill, under a white label (4.61:1). The 3px edge on dark status surfaces. */
+  --talos-scarlet-6: #BB081F;  /* Danger text and graphics on light. */
+  --talos-scarlet-7: #642A29;  /* Chip edge on dark (40%). */
+  --talos-scarlet-8: #3E2324;  /* Chip background on dark (20%). */
+
+  /* stone */
+  --talos-stone-1: #BAB7B3;  /* Info text and graphics on dark. */
+  --talos-stone-2: #75726F;  /* Fill, under a white label (4.78:1). */
+  --talos-stone-3: #5D5B58;  /* Info text and graphics on light. */
+
+  /* paper */
+  --talos-paper: #E2D2A8;  /* Brand cream insert. Used for the paper panel treatment, never as a UI surface. */
+
+  /* white */
+  --talos-white: #FFFFFF;
+
+  /* black */
+  --talos-black: #000000;
+
+  /* space */
+  --talos-space-micro: 4px;  /* Inside a control: icon to label, chip and badge padding */
+  --talos-space-tight: 8px;  /* Button padding, between tightly related controls */
+  --talos-space-snug: 12px;  /* Between related elements in a group */
+  --talos-space-compact: 16px;  /* Dense content padding: table cells, list rows, toolbars */
+  --talos-space-base: 24px;  /* Default gutter: card padding, grid gaps */
+  --talos-space-section: 32px;  /* Between sections of a page */
+  --talos-space-major: 64px;  /* Page-level separation */
+
+  /* radius */
+  --talos-radius-sm: 4px;  /* Buttons, badges, small controls */
+  --talos-radius-base: 6px;  /* Cards, inputs, the default */
+  --talos-radius-lg: 8px;  /* Nav items, panels */
+  --talos-radius-xl: 12px;  /* Modals, large surfaces */
+  --talos-radius-pill: 9999px;  /* Search fields, chips */
+
+  /* border */
+  --talos-border-hairline: 1px;  /* The only border width. Separation comes from hairlines, not weight. */
+  --talos-border-edge: 3px;  /* A colour bar, not a border: the status edge on dark callouts and tiles, and the active nav marker. */
+
+  /* font */
+  --talos-font-sans: Manrope, system-ui, -apple-system, 'Segoe UI', sans-serif;  /* UI and headings */
+  --talos-font-mono: 'JetBrains Mono', 'SF Mono', Consolas, 'Liberation Mono', monospace;  /* The machine voice: code, identifiers, versions, tracked labels */
+
+  /* text */
+  --talos-text-2xs: 10px;  /* Tracked uppercase labels only, mono or sans. Never other text. */
+  --talos-text-xs: 11px;  /* The floor for all other text: dense metadata, stat labels, chart axis labels */
+  --talos-text-sm: 12px;  /* Chips, badges, captions, timestamps */
+  --talos-text-base: 14px;  /* Body, table cells, inputs, nav */
+  --talos-text-md: 16px;  /* Card titles */
+  --talos-text-lg: 20px;  /* Between card titles and page titles; no fixed role yet */
+  --talos-text-xl: 24px;  /* Page titles, list and detail pages alike. Stat figures */
+  --talos-text-2xl: 30px;  /* Display. Not used in the consoles today */
+
+  /* weight */
+  --talos-weight-regular: 400;
+  --talos-weight-medium: 500;
+  --talos-weight-semibold: 600;
+  --talos-weight-bold: 700;
+
+  /* leading */
+  --talos-leading-tight: 1.25;  /* Headings */
+  --talos-leading-base: 1.5;  /* Body and tables */
+  --talos-leading-relaxed: 1.65;  /* Long-form prose */
+
+  /* tracking */
+  --talos-tracking-normal: 0;
+  --talos-tracking-eyebrow: 0.10em;  /* Sans section labels */
+  --talos-tracking-machine: 0.16em;  /* Mono uppercase labels */
+
+  /* Type roles. Theme-independent. Apply with type.css, the Tailwind
+     type-* utilities or the SCSS talos-type mixin. */
+  /* type-page-title: The one heading that names the page, list and detail pages alike. One per page. */
+  --talos-type-page-title-family: var(--talos-font-sans);
+  --talos-type-page-title-size: var(--talos-text-xl);
+  --talos-type-page-title-weight: var(--talos-weight-semibold);
+  --talos-type-page-title-leading: var(--talos-leading-tight);
+  --talos-type-page-title-tracking: var(--talos-tracking-normal);
+  /* type-section-title: Names a card, panel, modal or section within the page. */
+  --talos-type-section-title-family: var(--talos-font-sans);
+  --talos-type-section-title-size: var(--talos-text-md);
+  --talos-type-section-title-weight: var(--talos-weight-semibold);
+  --talos-type-section-title-leading: var(--talos-leading-tight);
+  --talos-type-section-title-tracking: var(--talos-tracking-normal);
+  /* type-stat: A headline number on a stat card or summary tile. Tabular figures. */
+  --talos-type-stat-family: var(--talos-font-sans);
+  --talos-type-stat-size: var(--talos-text-xl);
+  --talos-type-stat-weight: var(--talos-weight-semibold);
+  --talos-type-stat-leading: var(--talos-leading-tight);
+  --talos-type-stat-tracking: var(--talos-tracking-normal);
+  /* type-body: The content itself: table cells, form values, paragraphs, list items, page descriptions, empty states. */
+  --talos-type-body-family: var(--talos-font-sans);
+  --talos-type-body-size: var(--talos-text-base);
+  --talos-type-body-weight: var(--talos-weight-regular);
+  --talos-type-body-leading: var(--talos-leading-base);
+  --talos-type-body-tracking: var(--talos-tracking-normal);
+  /* type-body-strong: The body text that identifies a row or a record: the name in the first column, the value a key/value pair exists to show. */
+  --talos-type-body-strong-family: var(--talos-font-sans);
+  --talos-type-body-strong-size: var(--talos-text-base);
+  --talos-type-body-strong-weight: var(--talos-weight-semibold);
+  --talos-type-body-strong-leading: var(--talos-leading-base);
+  --talos-type-body-strong-tracking: var(--talos-tracking-normal);
+  /* type-control: Text a person clicks: buttons, tabs, nav items, menu items, segmented controls. */
+  --talos-type-control-family: var(--talos-font-sans);
+  --talos-type-control-size: var(--talos-text-base);
+  --talos-type-control-weight: var(--talos-weight-medium);
+  --talos-type-control-leading: var(--talos-leading-base);
+  --talos-type-control-tracking: var(--talos-tracking-normal);
+  /* type-label: Names a value that sits next to it: form field labels, the key in a key/value pair, filter names. */
+  --talos-type-label-family: var(--talos-font-sans);
+  --talos-type-label-size: var(--talos-text-sm);
+  --talos-type-label-weight: var(--talos-weight-medium);
+  --talos-type-label-leading: var(--talos-leading-base);
+  --talos-type-label-tracking: var(--talos-tracking-normal);
+  /* type-meta: Supporting text about something else: timestamps, counts, the email under a name, helper text under a field, pagination summaries. */
+  --talos-type-meta-family: var(--talos-font-sans);
+  --talos-type-meta-size: var(--talos-text-sm);
+  --talos-type-meta-weight: var(--talos-weight-regular);
+  --talos-type-meta-leading: var(--talos-leading-base);
+  --talos-type-meta-tracking: var(--talos-tracking-normal);
+  /* type-badge: Text inside a chip, pill or status badge. */
+  --talos-type-badge-family: var(--talos-font-sans);
+  --talos-type-badge-size: var(--talos-text-sm);
+  --talos-type-badge-weight: var(--talos-weight-semibold);
+  --talos-type-badge-leading: var(--talos-leading-base);
+  --talos-type-badge-tracking: var(--talos-tracking-normal);
+  /* type-overline: Uppercase, tracked. Groups or captions other content: sidebar group names, stat card captions, table column headers. */
+  --talos-type-overline-family: var(--talos-font-sans);
+  --talos-type-overline-size: var(--talos-text-2xs);
+  --talos-type-overline-weight: var(--talos-weight-semibold);
+  --talos-type-overline-leading: var(--talos-leading-tight);
+  --talos-type-overline-tracking: var(--talos-tracking-eyebrow);
+  /* type-overline-mono: Uppercase, tracked, mono. The machine voice as a label: environment badges, resource kinds above a name. */
+  --talos-type-overline-mono-family: var(--talos-font-mono);
+  --talos-type-overline-mono-size: var(--talos-text-2xs);
+  --talos-type-overline-mono-weight: var(--talos-weight-medium);
+  --talos-type-overline-mono-leading: var(--talos-leading-tight);
+  --talos-type-overline-mono-tracking: var(--talos-tracking-machine);
+  /* type-annotation: Text drawn inside a chart or diagram: axis labels, legends, data labels. Nothing outside a chart uses it. */
+  --talos-type-annotation-family: var(--talos-font-sans);
+  --talos-type-annotation-size: var(--talos-text-xs);
+  --talos-type-annotation-weight: var(--talos-weight-regular);
+  --talos-type-annotation-leading: var(--talos-leading-tight);
+  --talos-type-annotation-tracking: var(--talos-tracking-normal);
+  /* type-mono: An identifier standing on its own: IDs, versions, hashes, IPs, paths, node names. Inside a sentence, code keeps the sentence's size and only switches face. */
+  --talos-type-mono-family: var(--talos-font-mono);
+  --talos-type-mono-size: var(--talos-text-sm);
+  --talos-type-mono-weight: var(--talos-weight-regular);
+  --talos-type-mono-leading: var(--talos-leading-base);
+  --talos-type-mono-tracking: var(--talos-tracking-normal);
+  /* type-code-block: Multi-line code, config and log output. */
+  --talos-type-code-block-family: var(--talos-font-mono);
+  --talos-type-code-block-size: var(--talos-text-sm);
+  --talos-type-code-block-weight: var(--talos-weight-regular);
+  --talos-type-code-block-leading: var(--talos-leading-relaxed);
+  --talos-type-code-block-tracking: var(--talos-tracking-normal);
+
+  /* Semantic roles. Dark is the default theme. */
+  --talos-surface-page: var(--talos-ink-0);
+  --talos-surface-chrome: var(--talos-ink-1);
+  --talos-surface-card: var(--talos-ink-2);
+  --talos-surface-inset: var(--talos-ink-3);
+  --talos-surface-raised: var(--talos-ink-3);
+  --talos-surface-hover: var(--talos-ink-4);
+  --talos-surface-inert: var(--talos-ink-5);
+  --talos-surface-subtle: rgba(255, 255, 255, 0.05);
+  --talos-surface-inverse: var(--talos-ink-10);
+  --talos-surface-paper: var(--talos-paper);
+  --talos-content-emphasis: var(--talos-ink-10);
+  --talos-content-default: var(--talos-ink-9);
+  --talos-content-secondary: var(--talos-ink-8);
+  --talos-content-muted: var(--talos-ink-7);
+  --talos-content-disabled: var(--talos-ink-6);
+  --talos-content-inverse: var(--talos-ink-1);
+  --talos-content-on-accent: var(--talos-white);
+  --talos-border-subtle: rgba(255, 255, 255, 0.06);
+  --talos-border-default: rgba(255, 255, 255, 0.08);
+  --talos-border-strong: rgba(255, 255, 255, 0.14);
+  --talos-border-accent: var(--talos-red-3);
+  --talos-accent-default: var(--talos-red-3);
+  --talos-accent-hover: var(--talos-red-2);
+  --talos-accent-text: var(--talos-red-1);
+  --talos-accent-fill: var(--talos-red-3);
+  --talos-accent-fill-hover: rgba(225, 45, 70, 0.9);
+  --talos-accent-fill-active: var(--talos-red-7);
+  --talos-accent-subtle: rgba(228, 142, 150, 0.20);
+  --talos-accent-gradient: linear-gradient(90deg, var(--talos-gradient-display-1) 0%, var(--talos-gradient-display-2) 51%, var(--talos-gradient-display-3) 100%);
+  --talos-accent-gradient-fill: linear-gradient(270deg, var(--talos-gradient-display-3) 0%, var(--talos-red-3) 30%, var(--talos-red-3) 70%, var(--talos-gradient-display-1) 100%);
+  --talos-status-success-default: var(--talos-green-4);
+  --talos-status-success-text: var(--talos-green-4);
+  --talos-status-success-fill: var(--talos-green-5);
+  --talos-status-success-on-fill: var(--talos-white);
+  --talos-status-success-subtle: var(--talos-green-8);
+  --talos-status-success-subtle-border: var(--talos-green-7);
+  --talos-status-success-surface: var(--talos-surface-card);
+  --talos-status-success-border: var(--talos-surface-inert);
+  --talos-status-warning-default: var(--talos-amber-5);
+  --talos-status-warning-text: var(--talos-amber-5);
+  --talos-status-warning-fill: var(--talos-amber-4);
+  --talos-status-warning-on-fill: var(--talos-cream-10);
+  --talos-status-warning-subtle: var(--talos-amber-8);
+  --talos-status-warning-subtle-border: var(--talos-amber-7);
+  --talos-status-warning-surface: var(--talos-surface-card);
+  --talos-status-warning-border: var(--talos-surface-inert);
+  --talos-status-danger-default: var(--talos-scarlet-4);
+  --talos-status-danger-text: var(--talos-scarlet-4);
+  --talos-status-danger-fill: var(--talos-scarlet-5);
+  --talos-status-danger-on-fill: var(--talos-white);
+  --talos-status-danger-subtle: var(--talos-scarlet-8);
+  --talos-status-danger-subtle-border: var(--talos-scarlet-7);
+  --talos-status-danger-surface: var(--talos-surface-card);
+  --talos-status-danger-border: var(--talos-surface-inert);
+  --talos-status-info-default: var(--talos-stone-1);
+  --talos-status-info-text: var(--talos-stone-1);
+  --talos-status-info-fill: var(--talos-stone-2);
+  --talos-status-info-on-fill: var(--talos-white);
+  --talos-status-info-subtle: var(--talos-surface-hover);
+  --talos-status-info-subtle-border: rgba(0, 0, 0, 0);
+  --talos-status-info-surface: var(--talos-surface-card);
+  --talos-status-info-border: var(--talos-surface-inert);
+  --talos-shadow-card: 0 1px 3px rgba(0, 0, 0, 0.5), 0 0 0 1px rgba(255, 255, 255, 0.04);
+  --talos-shadow-dropdown: 0 4px 16px rgba(0, 0, 0, 0.5);
+  --talos-shadow-modal: 0 8px 32px rgba(0, 0, 0, 0.6);
+  --talos-shadow-focus: 0 0 0 3px rgba(225, 45, 70, 0.35);
+}
+
+/*
+ * Light theme. Products map their own theme switch onto one of these
+ * selectors, or re-declare the block under whatever attribute they already
+ * use (Bootstrap hosts: html[data-bs-theme="light"], via the SCSS mixin).
+ */
+[data-theme="light"],
+.talos-theme-light {
+  --talos-surface-page: var(--talos-cream-0);
+  --talos-surface-chrome: var(--talos-cream-1);
+  --talos-surface-card: var(--talos-cream-2);
+  --talos-surface-inset: var(--talos-cream-3);
+  --talos-surface-raised: var(--talos-cream-2);
+  --talos-surface-hover: var(--talos-cream-4);
+  --talos-surface-inert: var(--talos-cream-5);
+  --talos-surface-subtle: rgba(0, 0, 0, 0.04);
+  --talos-surface-inverse: var(--talos-cream-10);
+  --talos-surface-paper: var(--talos-paper);
+  --talos-content-emphasis: var(--talos-cream-10);
+  --talos-content-default: var(--talos-cream-9);
+  --talos-content-secondary: var(--talos-cream-8);
+  --talos-content-muted: var(--talos-cream-7);
+  --talos-content-disabled: var(--talos-cream-6);
+  --talos-content-inverse: var(--talos-cream-2);
+  --talos-content-on-accent: var(--talos-white);
+  --talos-border-subtle: rgba(0, 0, 0, 0.06);
+  --talos-border-default: rgba(0, 0, 0, 0.08);
+  --talos-border-strong: rgba(0, 0, 0, 0.16);
+  --talos-border-accent: var(--talos-red-3);
+  --talos-accent-default: var(--talos-red-3);
+  --talos-accent-hover: var(--talos-red-5);
+  --talos-accent-text: var(--talos-red-4);
+  --talos-accent-fill: var(--talos-red-3);
+  --talos-accent-fill-hover: rgba(225, 45, 70, 0.9);
+  --talos-accent-fill-active: var(--talos-red-7);
+  --talos-accent-subtle: rgba(212, 26, 59, 0.08);
+  --talos-accent-gradient: linear-gradient(90deg, var(--talos-gradient-display-1) 0%, var(--talos-gradient-display-2) 51%, var(--talos-gradient-display-3) 100%);
+  --talos-accent-gradient-fill: linear-gradient(270deg, var(--talos-gradient-display-3) 0%, var(--talos-red-3) 30%, var(--talos-red-3) 70%, var(--talos-gradient-display-1) 100%);
+  --talos-status-success-default: var(--talos-green-6);
+  --talos-status-success-text: var(--talos-green-6);
+  --talos-status-success-fill: var(--talos-green-5);
+  --talos-status-success-on-fill: var(--talos-white);
+  --talos-status-success-subtle: var(--talos-green-1);
+  --talos-status-success-subtle-border: var(--talos-green-2);
+  --talos-status-success-surface: var(--talos-green-1);
+  --talos-status-success-border: var(--talos-green-3);
+  --talos-status-warning-default: var(--talos-amber-6);
+  --talos-status-warning-text: var(--talos-amber-6);
+  --talos-status-warning-fill: var(--talos-amber-4);
+  --talos-status-warning-on-fill: var(--talos-cream-10);
+  --talos-status-warning-subtle: var(--talos-amber-1);
+  --talos-status-warning-subtle-border: var(--talos-amber-2);
+  --talos-status-warning-surface: var(--talos-amber-1);
+  --talos-status-warning-border: var(--talos-amber-3);
+  --talos-status-danger-default: var(--talos-scarlet-6);
+  --talos-status-danger-text: var(--talos-scarlet-6);
+  --talos-status-danger-fill: var(--talos-scarlet-5);
+  --talos-status-danger-on-fill: var(--talos-white);
+  --talos-status-danger-subtle: var(--talos-scarlet-1);
+  --talos-status-danger-subtle-border: var(--talos-scarlet-2);
+  --talos-status-danger-surface: var(--talos-scarlet-1);
+  --talos-status-danger-border: var(--talos-scarlet-3);
+  --talos-status-info-default: var(--talos-stone-3);
+  --talos-status-info-text: var(--talos-stone-3);
+  --talos-status-info-fill: var(--talos-stone-2);
+  --talos-status-info-on-fill: var(--talos-white);
+  --talos-status-info-subtle: var(--talos-surface-hover);
+  --talos-status-info-subtle-border: rgba(0, 0, 0, 0);
+  --talos-status-info-surface: var(--talos-surface-card);
+  --talos-status-info-border: var(--talos-surface-inert);
+  --talos-shadow-card: 0 1px 3px rgba(26, 26, 24, 0.06), 0 0 0 1px rgba(0, 0, 0, 0.02);
+  --talos-shadow-dropdown: 0 4px 16px rgba(26, 26, 24, 0.12);
+  --talos-shadow-modal: 0 8px 32px rgba(26, 26, 24, 0.16);
+  --talos-shadow-focus: 0 0 0 3px rgba(225, 45, 70, 0.30);
+}

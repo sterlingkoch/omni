@@ -401,7 +401,7 @@ useTitle('Monitor')
   @apply ml-3;
 }
 .monitor-chart-wide {
-  @apply border-b border-naturals-n5;
+  @apply border-b border-border-strong;
   margin-right: 0 !important;
   padding-bottom: 29px;
   border-radius: 4px 4px 0 0;

@@ -55,7 +55,7 @@ const eventStyle = (state: string) => {
 
 <template>
   <div class="pl-1">
-    <div class="flex h-full w-full flex-col gap-4 border-l-2 border-naturals-n4">
+    <div class="flex h-full w-full flex-col gap-4 border-l-2 border-border-default">
       <div v-for="event in events" :key="event.ts" class="grid grid-cols-6 gap-3">
         <div class="flex items-center gap-3">
           <div

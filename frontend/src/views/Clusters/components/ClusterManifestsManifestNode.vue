@@ -39,7 +39,7 @@ const isPending = computed(
 
 <template>
   <div
-    class="flex size-full items-center gap-2 rounded-md border border-naturals-n6 bg-naturals-n2 px-2.5 py-2 shadow-lg/40"
+    class="flex size-full items-center gap-2 rounded-md border border-border-strong bg-naturals-n2 px-2.5 py-2 shadow-lg/40"
   >
     <Handle id="left" type="target" :position="Position.Left" class="min-h-0! min-w-0!" />
 

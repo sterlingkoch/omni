@@ -331,7 +331,7 @@ const onSavePatchConfig = (config: string) => {
           <Tooltip :description="installDiskStatus?.spec.message" placement="bottom">
             <div
               v-if="systemDiskPath"
-              class="cursor-not-allowed rounded border border-naturals-n6 py-1.5 pr-8 pl-3 text-naturals-n11"
+              class="cursor-not-allowed rounded border border-border-strong py-1.5 pr-8 pl-3 text-naturals-n11"
             >
               Install Disk: {{ systemDiskPath }}
             </div>

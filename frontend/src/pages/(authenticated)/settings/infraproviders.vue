@@ -151,7 +151,7 @@ useTitle('Infra Providers')
             <div
               v-for="item in items"
               :key="item.metadata.id"
-              class="grid grid-cols-5 items-center rounded border border-naturals-n5 bg-naturals-n1 p-3"
+              class="grid grid-cols-5 items-center rounded border border-border-strong bg-naturals-n1 p-3"
               :class="{ 'border-dashed': !item.spec.name }"
             >
               <div class="flex items-center gap-3">

@@ -72,7 +72,7 @@ const updateExtension = (extension: TalosExtensionsSpecInfo, enabled: boolean) =
       <div
         v-for="extension in filteredExtensions"
         :key="extension.name"
-        class="grid grid-cols-4 gap-1 border-b border-naturals-n6 p-2 transition-colors hover:bg-naturals-n5"
+        class="grid grid-cols-4 gap-1 border-b border-border-strong p-2 transition-colors hover:bg-naturals-n5"
         role="button"
         @click="updateExtension(extension, !modelValue[extension.name!])"
       >

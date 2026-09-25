@@ -438,10 +438,10 @@ const submit = async () => {
             <div class="flex flex-wrap items-center gap-2">
               <template v-for="(_, i) in conditions" :key="i">
                 <div
-                  class="flex gap-0.5 rounded-md border border-transparent transition-colors focus-within:border-naturals-n8"
+                  class="flex gap-0.5 rounded-md border border-transparent transition-colors focus-within:border-border-strong"
                 >
                   <div
-                    class="flex cursor-pointer items-center rounded-l-md bg-naturals-n3 px-2 transition-colors hover:bg-naturals-n7 hover:text-naturals-n14"
+                    class="flex cursor-pointer items-center rounded-l-md bg-naturals-n3 px-2 transition-colors hover:bg-surface-inert hover:text-naturals-n14"
                     @click="deleteCondition(i)"
                   >
                     <TIcon icon="delete" class="h-4 w-4" />
@@ -559,7 +559,7 @@ const submit = async () => {
     </div>
 
     <div
-      class="flex h-16 items-center justify-end gap-2 border-t border-naturals-n5 bg-naturals-n1 px-12 py-6 text-xs"
+      class="flex h-16 items-center justify-end gap-2 border-t border-border-strong bg-naturals-n1 px-12 py-6 text-xs"
     >
       <TButton variant="highlighted" :disabled="!canSubmit" @click="submit">
         {{ machineClassEditId ? 'Update Machine Class' : 'Create Machine Class' }}

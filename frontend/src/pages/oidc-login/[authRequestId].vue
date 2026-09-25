@@ -82,7 +82,7 @@ useTitle('OIDC Login')
           />
           <div
             v-if="authCode"
-            class="flex w-full items-center justify-center gap-0.5 rounded-lg border border-naturals-n4 p-1 pl-2"
+            class="flex w-full items-center justify-center gap-0.5 rounded-lg border border-border-default p-1 pl-2"
           >
             <div class="mr-2 text-sm text-naturals-n14">Access Code</div>
             <div class="flex-1" />
@@ -93,7 +93,7 @@ useTitle('OIDC Login')
               {{ copied ? 'Copied' : authCode }}
             </div>
             <div
-              class="cursor-pointer rounded-r-md bg-naturals-n6 px-2 py-1 text-naturals-n14 transition-colors hover:bg-naturals-n8"
+              class="cursor-pointer rounded-r-md bg-naturals-n6 px-2 py-1 text-naturals-n14 transition-colors hover:bg-surface-hover"
               @click="copyCode"
             >
               <TIcon icon="copy" class="h-5" />

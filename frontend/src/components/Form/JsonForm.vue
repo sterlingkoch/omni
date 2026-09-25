@@ -176,15 +176,15 @@ const uiSchema = computed(() => {
 @reference "../../index.css";
 
 .vertical-layout {
-  @apply flex flex-col divide-y divide-naturals-n4;
+  @apply flex flex-col divide-y divide-border-default;
 }
 
 .group {
-  @apply m-2 rounded border border-naturals-n6;
+  @apply m-2 rounded border border-border-strong;
 }
 
 .group > .group-item:not(:first-of-type) {
-  @apply border-t border-naturals-n4;
+  @apply border-t border-border-default;
 }
 
 .group-label {

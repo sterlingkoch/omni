@@ -223,7 +223,7 @@ useTitle('Audit Logs')
               :key="vRow.key.toString()"
               :ref="measureElement"
               :data-index="vRow.index"
-              class="grid grid-cols-[36px_160px_180px_220px_1fr] gap-x-0.5 border-t border-naturals-n5"
+              class="grid grid-cols-[36px_160px_180px_220px_1fr] gap-x-0.5 border-t border-border-strong"
             >
               <AuditLogItem
                 :data="data[vRow.index]"

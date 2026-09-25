@@ -229,7 +229,7 @@ useTitle('Bootstrap Manifests')
 }
 
 .bottom-line {
-  @apply rounded-t-sm border-b border-b-naturals-n5;
+  @apply rounded-t-sm border-b border-b-border-strong;
 }
 .label {
   @apply mr-2 rounded-full bg-naturals-n3 px-2 py-1 text-xs font-bold text-naturals-n9 uppercase;

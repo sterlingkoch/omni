@@ -26,7 +26,7 @@ const highlighted = computedAsync(() => (code ? highlight(code, lang, search) : 
 </script>
 
 <template>
-  <div class="relative rounded border border-naturals-n7 bg-naturals-n2 text-naturals-n14">
+  <div class="relative rounded border border-border-strong bg-naturals-n2 text-naturals-n14">
     <div
       class="absolute top-2 right-2 z-10 flex items-center justify-center rounded-md p-1 backdrop-blur"
     >
