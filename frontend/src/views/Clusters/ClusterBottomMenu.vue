@@ -48,7 +48,7 @@ defineProps<{
 @reference "../../index.css";
 
 .menu {
-  @apply fixed z-20 flex w-full gap-compact rounded bg-surface-raised p-5;
+  @apply fixed z-20 flex w-full gap-compact rounded bg-surface-raised p-base;
   width: 452px;
   min-height: 56px;
   bottom: 32px;

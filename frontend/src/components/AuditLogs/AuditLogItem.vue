@@ -80,7 +80,7 @@ function toggleRow() {
       <div role="cell">
         <span
           v-if="item.event_type.toUpperCase()"
-          class="resource-label inline-flex items-center gap-1.5"
+          class="resource-label inline-flex items-center gap-micro"
         >
           <span
             aria-hidden="true"

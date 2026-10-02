@@ -65,7 +65,7 @@ function barTotal(bar: Bar) {
         </div>
       </div>
 
-      <dl class="flex flex-wrap gap-x-compact gap-y-1.5">
+      <dl class="flex flex-wrap gap-x-compact gap-y-tight">
         <div
           v-for="(item, index) in bar.segments"
           :key="item.label"

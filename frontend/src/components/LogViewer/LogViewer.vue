@@ -56,7 +56,7 @@ watch(
 <template>
   <div class="flex flex-col">
     <div
-      class="flex w-full items-center justify-between rounded-xs border border-border-default bg-surface-card px-compact py-2.5"
+      class="flex w-full items-center justify-between rounded-xs border border-border-default bg-surface-card px-compact py-snug"
     >
       <div class="flex w-full gap-section text-xs text-content-default">
         <p v-if="!withoutDate" class="w-35 shrink-0">Date</p>

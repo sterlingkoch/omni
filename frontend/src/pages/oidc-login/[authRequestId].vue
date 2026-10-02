@@ -101,7 +101,7 @@ useTitle('OIDC Login')
               <TIcon icon="copy" class="h-5" />
             </div>
           </div>
-          <div v-else class="my-0.5 flex w-full flex-col gap-snug">
+          <div v-else class="my-micro flex w-full flex-col gap-snug">
             <TButton class="w-full" variant="highlighted" @click="confirmOIDCRequest">
               Grant Access
             </TButton>

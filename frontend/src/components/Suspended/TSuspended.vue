@@ -35,7 +35,7 @@ import TIcon from '@/components/Icon/TIcon.vue'
   @apply flex items-center;
 }
 .suspended__icon {
-  @apply mr-5 fill-current;
+  @apply mr-base fill-current;
   width: 20px;
   height: 20px;
 }

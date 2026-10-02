@@ -67,7 +67,7 @@ const icsUrl = computed(() => {
   <Modal v-model:open="open" cancel-label="Close" title="Get support">
     <template #description>Various ways to get help with Omni and Talos</template>
 
-    <div class="flex w-105 flex-col gap-2.5">
+    <div class="flex w-105 flex-col gap-snug">
       <a
         v-if="support?.spec.support_enabled"
         href="https://support.siderolabs.com/"

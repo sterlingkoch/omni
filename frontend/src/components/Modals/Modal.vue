@@ -71,7 +71,7 @@ const forwarded = useForwardPropsEmits(dialogRootProps, emit)
           )
         "
       >
-        <div class="mb-5 flex shrink-0 items-start justify-between gap-compact">
+        <div class="mb-base flex shrink-0 items-start justify-between gap-compact">
           <div class="flex flex-col">
             <DialogTitle class="font-medium text-content-emphasis">{{ title }}</DialogTitle>
             <DialogDescription v-if="$slots.description" class="text-sm">

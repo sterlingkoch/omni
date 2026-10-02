@@ -68,7 +68,7 @@ const errors = computed(() => {
             icon="window"
             regular-link
           />
-          <div v-if="errors.length" class="flex items-center gap-compact pr-5 pl-base text-xs">
+          <div v-if="errors.length" class="flex items-center gap-compact pr-base pl-base text-xs">
             <TIcon icon="warning" class="ml-0.5 text-status-warning-text" />
             <div class="flex-1 truncate text-status-warning-text">
               {{ pluralize('service', errors.length, true) }}

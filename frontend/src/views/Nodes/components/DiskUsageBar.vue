@@ -103,7 +103,7 @@ const getVolumeClass = (volume: Resource<DiscoveredVolumeSpec>) => {
       <div
         v-for="volume in volumes"
         :key="'legend-' + volume.metadata.id"
-        class="flex items-center gap-1.5"
+        class="flex items-center gap-micro"
       >
         <span class="inline-block size-2.5 rounded-sm" :class="getVolumeClass(volume)" />
         <span class="font-medium text-content-default">
@@ -113,7 +113,7 @@ const getVolumeClass = (volume: Resource<DiscoveredVolumeSpec>) => {
           {{ prettyBytes(volume.spec.size ?? 0) }}
         </span>
       </div>
-      <div v-if="unallocatedPercent > 0" class="flex items-center gap-1.5">
+      <div v-if="unallocatedPercent > 0" class="flex items-center gap-micro">
         <span class="inline-block size-2.5 rounded-sm bg-surface-inert" />
         <span class="font-medium text-content-default">Unallocated</span>
         <span class="font-medium text-content-muted">
