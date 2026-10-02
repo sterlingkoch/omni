@@ -4,7 +4,17 @@
 // included in the LICENSE file.
 import type { ClassValue } from 'clsx'
 import { clsx } from 'clsx'
-import { twMerge } from 'tailwind-merge'
+import { extendTailwindMerge } from 'tailwind-merge'
+
+// Without the design system's step names, twMerge cannot tell that p-compact
+// and p-tight conflict, and keeps both.
+const twMerge = extendTailwindMerge({
+  extend: {
+    theme: {
+      spacing: ['micro', 'tight', 'snug', 'compact', 'base', 'section', 'major'],
+    },
+  },
+})
 
 export function cn(...inputs: ClassValue[]) {
   return twMerge(clsx(inputs))

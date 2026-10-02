@@ -55,8 +55,8 @@ const { width } = useElementSize(triggerRef)
           :disabled
           class="rounded-tl-none rounded-bl-none"
           :class="{
-            'px-2': size === 'md',
-            'px-1': size === 'sm',
+            'px-tight': size === 'md',
+            'px-micro': size === 'sm',
           }"
           icon="chevron-down"
         />
@@ -79,7 +79,7 @@ const { width } = useElementSize(triggerRef)
           v-for="action in actions"
           :key="action"
           value="New Tab"
-          class="cursor-pointer px-3 py-1.5 outline-none select-none hover:text-content-default focus:bg-surface-hover focus:text-content-default"
+          class="cursor-pointer px-snug py-1.5 outline-none select-none hover:text-content-default focus:bg-surface-hover focus:text-content-default"
           @select="() => $emit('click', action)"
         >
           {{ action }}

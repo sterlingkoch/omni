@@ -65,7 +65,7 @@ const darkThemeEnabled = computed(() => {
       </RouterView>
 
       <div
-        class="relative flex grow flex-col gap-4 overflow-auto"
+        class="relative flex grow flex-col gap-compact overflow-auto"
         :class="{
           'max-md:pointer-events-none max-md:select-none': isSidebarOpen,
         }"

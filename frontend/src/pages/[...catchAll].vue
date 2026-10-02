@@ -17,7 +17,7 @@ useTitle('Page Not Found')
     <div class="flex flex-col items-center">
       <div class="code">404</div>
       <div class="text-center text-xl">Page not found</div>
-      <TButton class="mt-4" @click="() => $router.push({ path: '/' })">Go Back</TButton>
+      <TButton class="mt-compact" @click="() => $router.push({ path: '/' })">Go Back</TButton>
     </div>
   </PageContainer>
 </template>

@@ -87,7 +87,7 @@ const hasManifests = computed(() => Object.keys(manifestsStatus.value?.spec.grou
       v-else-if="!hasManifests"
       class="@container flex grow flex-col items-center justify-center overflow-y-auto"
     >
-      <div class="flex flex-col items-center gap-3 text-center">
+      <div class="flex flex-col items-center gap-snug text-center">
         <div class="flex size-14 items-center justify-center rounded-full bg-surface-raised">
           <TIcon icon="document-text" class="size-7 text-accent-text" />
         </div>
@@ -104,16 +104,16 @@ const hasManifests = computed(() => Object.keys(manifestsStatus.value?.spec.grou
           :href="getDocsLink('omni', '/cluster-management/sync-kubernetes-manifests')"
           target="_blank"
           rel="noopener noreferrer"
-          class="link-primary inline-flex items-center gap-1 text-sm"
+          class="link-primary inline-flex items-center gap-micro text-sm"
         >
           Learn more about syncing Kubernetes manifests
           <TIcon icon="external-link" class="size-3.5" />
         </a>
       </div>
 
-      <div class="grid max-w-3xl gap-3 py-6 @2xl:grid-cols-3">
+      <div class="grid max-w-3xl gap-snug py-base @2xl:grid-cols-3">
         <div
-          class="flex flex-col items-center gap-2 rounded-lg border border-border-default bg-surface-card p-4 text-center"
+          class="flex flex-col items-center gap-tight rounded-lg border border-border-default bg-surface-card p-compact text-center"
         >
           <TIcon icon="pods" class="size-5 text-content-default" />
           <h3 class="text-sm font-medium text-content-emphasis">Grouped manifests</h3>
@@ -124,7 +124,7 @@ const hasManifests = computed(() => Object.keys(manifestsStatus.value?.spec.grou
         </div>
 
         <div
-          class="flex flex-col items-center gap-2 rounded-lg border border-border-default bg-surface-card p-4 text-center"
+          class="flex flex-col items-center gap-tight rounded-lg border border-border-default bg-surface-card p-compact text-center"
         >
           <TIcon icon="check-in-circle" class="size-5 text-content-default" />
           <h3 class="text-sm font-medium text-content-emphasis">Sync tracking</h3>
@@ -135,7 +135,7 @@ const hasManifests = computed(() => Object.keys(manifestsStatus.value?.spec.grou
         </div>
 
         <div
-          class="flex flex-col items-center gap-2 rounded-lg border border-border-default bg-surface-card p-4 text-center"
+          class="flex flex-col items-center gap-tight rounded-lg border border-border-default bg-surface-card p-compact text-center"
         >
           <TIcon icon="list-bullet" class="size-5 text-content-default" />
           <h3 class="text-sm font-medium text-content-emphasis">Graph &amp; list views</h3>
@@ -150,16 +150,16 @@ const hasManifests = computed(() => Object.keys(manifestsStatus.value?.spec.grou
     <Tabs
       v-else-if="manifestsStatus"
       v-model="routeHash"
-      tabs-list-class="mb-2"
+      tabs-list-class="mb-tight"
       class="grow overflow-y-hidden"
     >
       <template #triggers>
-        <TabButton class="flex items-center gap-1" :value="TabType.GRAPH">
+        <TabButton class="flex items-center gap-micro" :value="TabType.GRAPH">
           <TIcon icon="pods" aria-hidden="true" class="size-4" />
           Graph
         </TabButton>
 
-        <TabButton class="flex items-center gap-1" :value="TabType.LIST">
+        <TabButton class="flex items-center gap-micro" :value="TabType.LIST">
           <TIcon icon="list-bullet" aria-hidden="true" class="size-4" />
           List
         </TabButton>

@@ -49,16 +49,16 @@ const isInfoVisible = ref(false)
   @apply flex cursor-default items-center justify-start;
 }
 .label__text {
-  @apply mr-1 text-xs;
+  @apply mr-micro text-xs;
 }
 .label__icon {
-  @apply relative mr-3 h-4 w-4 fill-current;
+  @apply relative mr-snug h-4 w-4 fill-current;
 }
 .label__icon-wrapper {
   @apply relative flex items-center justify-start;
 }
 .label__info {
-  @apply relative flex items-center justify-center rounded border border-border-default bg-surface-raised px-3 py-2 text-xs text-content-muted;
+  @apply relative flex items-center justify-center rounded border border-border-default bg-surface-raised px-snug py-tight text-xs text-content-muted;
   width: 150px;
   z-index: 0;
 }

@@ -90,9 +90,9 @@ const forceDestroy = async () => {
 
 <template>
   <div
-    class="col-span-full grid grid-cols-subgrid items-center py-3 pr-4 pl-2 text-xs text-content-emphasis"
+    class="col-span-full grid grid-cols-subgrid items-center py-snug pr-compact pl-tight text-xs text-content-emphasis"
   >
-    <div class="col-span-2 ml-6 flex items-center gap-2">
+    <div class="col-span-2 ml-base flex items-center gap-tight">
       <IconHeaderDropdownLoading
         v-if="stage !== TCommonStatuses.PROVISIONED"
         active

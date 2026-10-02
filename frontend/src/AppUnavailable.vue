@@ -20,8 +20,8 @@ import THeader from '@/components/THeader/THeader.vue'
   <div class="flex min-h-dvh flex-col">
     <THeader />
 
-    <div class="flex flex-1 flex-col items-center justify-center gap-4">
-      <div class="flex gap-4 rounded-lg bg-surface-inert px-6 py-4 drop-shadow-md">
+    <div class="flex flex-1 flex-col items-center justify-center gap-compact">
+      <div class="flex gap-compact rounded-lg bg-surface-inert px-base py-compact drop-shadow-md">
         <TIcon icon="warning" class="h-12 w-12 fill-current text-content-emphasis" />
         <div class="flex flex-col text-content-default">
           <div>It appears we are experiencing some issues.</div>

@@ -39,7 +39,7 @@ const workersCount = computed(() => {
 </script>
 
 <template>
-  <div class="flex items-center gap-4">
+  <div class="flex items-center gap-compact">
     <div class="flex grow flex-col">
       <p v-if="!loading" class="text-xs text-content-muted">
         <span class="text-content-default">{{ controlPlaneCount }}, {{ workersCount }}</span>
@@ -49,7 +49,7 @@ const workersCount = computed(() => {
       <div v-if="warning" class="text-xs text-status-warning-text">{{ warning }}</div>
     </div>
 
-    <div class="flex shrink-0 items-center gap-2">
+    <div class="flex shrink-0 items-center gap-tight">
       <TButton v-if="onReset" variant="secondary" @click="onReset">Cancel</TButton>
       <TButton icon-position="left" variant="highlighted" :disabled="disabled" @click="onSubmit">
         {{ action }}

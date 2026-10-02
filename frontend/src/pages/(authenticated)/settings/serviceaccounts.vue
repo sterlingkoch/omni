@@ -60,12 +60,12 @@ useTitle('Service Accounts')
 </script>
 
 <template>
-  <PageContainer class="flex h-full flex-col gap-4">
-    <div class="flex items-start gap-1">
+  <PageContainer class="flex h-full flex-col gap-compact">
+    <div class="flex items-start gap-micro">
       <PageHeader title="Settings" subtitle="Service Accounts" class="flex-1" />
     </div>
 
-    <div class="flex grow flex-col gap-2">
+    <div class="flex grow flex-col gap-tight">
       <div class="flex justify-end">
         <TButton
           icon="plus"
@@ -128,7 +128,7 @@ useTitle('Service Accounts')
 }
 
 .users-header {
-  @apply mb-1 bg-surface-card;
+  @apply mb-micro bg-surface-card;
   padding: 10px 16px;
 }
 

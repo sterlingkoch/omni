@@ -48,7 +48,7 @@ defineProps<{
 @reference "../../index.css";
 
 .menu {
-  @apply fixed z-20 flex w-full gap-4 rounded bg-surface-raised p-5;
+  @apply fixed z-20 flex w-full gap-compact rounded bg-surface-raised p-5;
   width: 452px;
   min-height: 56px;
   bottom: 32px;
@@ -58,7 +58,7 @@ defineProps<{
   @apply flex items-center text-xs text-content-muted;
 }
 .menu__amount-box--light {
-  @apply mr-1 text-content-default;
+  @apply mr-micro text-content-default;
 }
 .menu__buttons-box {
   @apply flex items-center;
