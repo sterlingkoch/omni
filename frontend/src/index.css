@@ -14,8 +14,8 @@ included in the LICENSE file.
 @custom-variant dark (&:where(.dark, .dark *));
 
 @theme {
-  --font-sans: Roboto, sans-serif;
-  --font-mono: 'Roboto Mono', monospace;
+  --font-sans: var(--talos-font-sans);
+  --font-mono: var(--talos-font-mono);
 }
 
 @layer base {
